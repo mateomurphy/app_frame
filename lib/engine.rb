@@ -1,7 +1,7 @@
 module AppFrame
   class Engine < Rails::Engine
-    engine_name :app_frame
-    
+    initializer "static assets" do |app|
+      app.middleware.insert_after ::ActionDispatch::Static, ::ActionDispatch::Static, "#{config.root}/public"
+    end
   end
-  
 end

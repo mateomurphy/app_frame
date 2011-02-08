@@ -19,11 +19,14 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "app_frame.gemspec",
     "lib/app_frame.rb",
+    "lib/engine.rb",
     "test/helper.rb",
     "test/test_app_frame.rb"
   ]
@@ -46,17 +49,23 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_development_dependency(%q<haml>, [">= 0"])
+      s.add_runtime_dependency(%q<haml>, ["> 0.1"])
     else
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<haml>, [">= 0"])
+      s.add_dependency(%q<haml>, ["> 0.1"])
     end
   else
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<haml>, [">= 0"])
+    s.add_dependency(%q<haml>, ["> 0.1"])
   end
 end
 

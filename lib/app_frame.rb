@@ -1,1 +1,2 @@
-require 'app_frame/engine'
+require 'engine'
+require 'haml'
