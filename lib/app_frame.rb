@@ -1,2 +1,3 @@
 require 'engine'
 require 'haml'
+require 'app_frame/controller_methods'
