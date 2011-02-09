@@ -1,6 +1,12 @@
 = app_frame
 
-Description goes here.
+A skeleton for rails apps
+
+== To do
+
+* Different layout types
+* Implement default styling for layouts
+* Default views for common actions
 
 == Contributing to app_frame
  
