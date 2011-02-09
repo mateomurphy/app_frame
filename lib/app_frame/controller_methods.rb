@@ -19,7 +19,8 @@ module AppFrame
     
     module ClassMethods
       def app_frame(options = {})
-        layout 'app_frame'
+        
+        layout "app_frame/#{options[:layout] || 'default'}"
       end
     end
   end
