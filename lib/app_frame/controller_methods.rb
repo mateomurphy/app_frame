@@ -1,4 +1,5 @@
 module AppFrame
+  
   module ControllerMethods
     def self.included(klass)
       klass.extend(ClassMethods)
@@ -7,7 +8,7 @@ module AppFrame
     def render_to_body(options = {})
       super
     rescue ActionView::MissingTemplate => e
-      template = "app_frame/actions/#{action_name}"
+      template = "#{AppFrame::theme}/actions/#{action_name}"
       
       if options[:template] == template
         # we're already tring to render this template and it wasn't found
@@ -20,7 +21,7 @@ module AppFrame
     module ClassMethods
       def app_frame(options = {})
         inherit_resources
-        layout "app_frame/#{options[:layout] || 'default'}"
+        layout "#{AppFrame::theme}/#{options[:layout] || 'default'}"
         include PaginationSupport
       end
     end

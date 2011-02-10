@@ -7,3 +7,9 @@ require 'show_for'
 require 'will_paginate'
 require 'app_frame/controller_methods'
 require 'app_frame/view_methods'
+
+module AppFrame
+  def self.theme
+    'web_app_theme'
+  end
+end
