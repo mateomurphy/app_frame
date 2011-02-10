@@ -4,9 +4,9 @@ A skeleton for rails apps
 
 == To do
 
-* Different layout types
-* Implement default styling for layouts
-* Default views for common actions
+* Fully implement web_app_theme support
+* Move fallback template rendering out of controller into views
+* Implement menu system
 
 == Contributing to app_frame
  
