@@ -21,7 +21,20 @@ module AppFrame
       def app_frame(options = {})
         inherit_resources
         layout "app_frame/#{options[:layout] || 'default'}"
+        include PaginationSupport
       end
     end
+    
+    module PaginationSupport
+      # paginate collection
+      def collection
+        get_collection_ivar || set_collection_ivar(end_of_association_chain.scoped.paginate(:page => params[:page], :per_page => per_page))
+      end
+
+      def per_page
+        20
+      end    
+    end
+    
   end
 end

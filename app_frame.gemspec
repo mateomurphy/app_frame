@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "app/views/app_frame/actions/_form.html.haml",
     "app/views/app_frame/actions/edit.html.haml",
     "app/views/app_frame/actions/index.html.haml",
     "app/views/app_frame/actions/new.html.haml",
@@ -64,6 +65,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<inherited_resources>, ["> 0.1"])
       s.add_runtime_dependency(%q<simple_form>, ["> 0.1"])
       s.add_runtime_dependency(%q<show_for>, ["> 0.1"])
+      s.add_runtime_dependency(%q<will_paginate>, ["> 0.1"])
     else
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -74,6 +76,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<inherited_resources>, ["> 0.1"])
       s.add_dependency(%q<simple_form>, ["> 0.1"])
       s.add_dependency(%q<show_for>, ["> 0.1"])
+      s.add_dependency(%q<will_paginate>, ["> 0.1"])
     end
   else
     s.add_dependency(%q<shoulda>, [">= 0"])
@@ -85,6 +88,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<inherited_resources>, ["> 0.1"])
     s.add_dependency(%q<simple_form>, ["> 0.1"])
     s.add_dependency(%q<show_for>, ["> 0.1"])
+    s.add_dependency(%q<will_paginate>, ["> 0.1"])
   end
 end
 
