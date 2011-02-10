@@ -19,7 +19,7 @@ module AppFrame
     
     module ClassMethods
       def app_frame(options = {})
-        
+        inherit_resources
         layout "app_frame/#{options[:layout] || 'default'}"
       end
     end

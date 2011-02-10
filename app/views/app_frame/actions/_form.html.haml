@@ -1,0 +1,4 @@
+= simple_form_for resource do |f|
+  - editable_attributes_for(resource_class).each do |name|
+    =f.attribute name
+  = f.button :submit
