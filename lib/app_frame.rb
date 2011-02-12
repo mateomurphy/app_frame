@@ -7,6 +7,7 @@ require 'show_for'
 require 'will_paginate'
 require 'app_frame/controller_methods'
 require 'app_frame/view_methods'
+require 'app_frame/fallback_resolver'
 
 module AppFrame
   def self.theme

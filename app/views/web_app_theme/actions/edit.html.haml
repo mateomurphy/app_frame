@@ -9,6 +9,10 @@
       = t("web-app-theme.edit", :default => "Edit")
       Post
     .inner
-      = form_for @post, :url => resource_path(@post), :html => { :class => :form } do |f|
+      =simple_form_for resource, :html => { :class => :form } do |f|
+        -editable_attributes_for(resource_class).each do |name|
+          =f.attribute name    
+    
+      = form_for resource, :url => resource_path(resource), :html => { :class => :form } do |f|
         = render :partial => "form", :locals => {:f => f}
-- content_for :sidebar, render(:partial => '/web_app_theme/actions/sidebar')
+- content_for :sidebar, render(:partial => 'sidebar')
