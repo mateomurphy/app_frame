@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-02-09}
+  s.date = %q{2011-02-12}
   s.description = %q{TODO: longer description of your gem}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
@@ -31,11 +31,27 @@ Gem::Specification.new do |s|
     "app/views/app_frame/actions/show.html.haml",
     "app/views/app_frame/layout/_head.html.haml",
     "app/views/layouts/app_frame/default.html.haml",
+    "app/views/layouts/web_app_theme/default.html.haml",
+    "app/views/web_app_theme/actions/_form.html.haml",
+    "app/views/web_app_theme/actions/_list.html.haml",
+    "app/views/web_app_theme/actions/_show.html.haml",
+    "app/views/web_app_theme/actions/_sidebar.html.haml",
+    "app/views/web_app_theme/actions/edit.html.haml",
+    "app/views/web_app_theme/actions/index.html.haml",
+    "app/views/web_app_theme/actions/new.html.haml",
+    "app/views/web_app_theme/actions/show.html.haml",
     "app_frame.gemspec",
     "lib/app_frame.rb",
     "lib/app_frame/controller_methods.rb",
+    "lib/app_frame/fallback_resolver.rb",
     "lib/app_frame/view_methods.rb",
     "lib/engine.rb",
+    "lib/table_for.rb",
+    "lib/table_for/action.rb",
+    "lib/table_for/attribute.rb",
+    "lib/table_for/builder.rb",
+    "lib/table_for/column.rb",
+    "lib/table_for/helper.rb",
     "public/javascripts/app_frame/application.js",
     "public/stylesheets/app_frame/application.css",
     "test/helper.rb",
@@ -66,6 +82,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<simple_form>, ["> 0.1"])
       s.add_runtime_dependency(%q<show_for>, ["> 0.1"])
       s.add_runtime_dependency(%q<will_paginate>, ["> 0.1"])
+      s.add_runtime_dependency(%q<simple-navigation>, ["> 0.1"])
     else
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -77,6 +94,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<simple_form>, ["> 0.1"])
       s.add_dependency(%q<show_for>, ["> 0.1"])
       s.add_dependency(%q<will_paginate>, ["> 0.1"])
+      s.add_dependency(%q<simple-navigation>, ["> 0.1"])
     end
   else
     s.add_dependency(%q<shoulda>, [">= 0"])
@@ -89,6 +107,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<simple_form>, ["> 0.1"])
     s.add_dependency(%q<show_for>, ["> 0.1"])
     s.add_dependency(%q<will_paginate>, ["> 0.1"])
+    s.add_dependency(%q<simple-navigation>, ["> 0.1"])
   end
 end
 

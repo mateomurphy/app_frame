@@ -26,6 +26,7 @@ Jeweler::Tasks.new do |gem|
   gem.add_runtime_dependency 'simple_form', '> 0.1'
   gem.add_runtime_dependency 'show_for', '> 0.1'
   gem.add_runtime_dependency 'will_paginate', '> 0.1'
+  gem.add_runtime_dependency 'simple-navigation', '> 0.1'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new
