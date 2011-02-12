@@ -8,26 +8,7 @@
       = t("web-app-theme.all", :default => "All")
       Posts
     .inner
-      %table.table
-        %tr
-          %th.first ID
-          %th
-            = t("activerecord.attributes.post.title", :default => t("activerecord.labels.title", :default => "Title"))
-          %th= t("web-app-theme.created_at", :default => "Created at")
-          %th.last &nbsp;
-        - collection.each do |post|
-          %tr{:class => cycle("odd", "even")}
-            %td
-              = post.id
-            %td
-              = link_to post.title, resource_path(post)
-            %td
-              = post.created_at
-            %td.last
-              = link_to "#{t("web-app-theme.show", :default => "Show")}", resource_path(post)
-              |
-              \#{link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_resource_path(post)} |
-              \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", resource_path(post), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
+      =render 'list'
       .actions-bar.wat-cf
         .actions
         = will_paginate collection

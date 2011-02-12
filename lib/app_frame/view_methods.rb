@@ -12,6 +12,10 @@ module AppFrame
       klass.column_names - ['id', 'created_at', 'updated_at', 'type']
     end
 
+    def attributes_for(klass)
+      klass.column_names
+    end
+
     module ClassMethods
 
     end
