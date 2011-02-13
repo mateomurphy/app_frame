@@ -1,3 +1,5 @@
+require 'rails'
+require 'action_controller'
 require 'active_support/core_ext/object/returning' #required for will_paginate
 require 'engine'
 require 'haml'
