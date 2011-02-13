@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{app_frame}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
@@ -52,8 +52,21 @@ Gem::Specification.new do |s|
     "lib/table_for/builder.rb",
     "lib/table_for/column.rb",
     "lib/table_for/helper.rb",
+    "public/images/web-app-theme/avatar.png",
+    "public/images/web-app-theme/icons/application_edit.png",
+    "public/images/web-app-theme/icons/cross.png",
+    "public/images/web-app-theme/icons/key.png",
+    "public/images/web-app-theme/icons/tick.png",
     "public/javascripts/app_frame/application.js",
     "public/stylesheets/app_frame/application.css",
+    "public/stylesheets/web-app-theme/base.css",
+    "public/stylesheets/web-app-theme/override.css",
+    "public/stylesheets/web-app-theme/themes/default/images/arrow.png",
+    "public/stylesheets/web-app-theme/themes/default/images/boxbar-background.png",
+    "public/stylesheets/web-app-theme/themes/default/images/button-background-active.png",
+    "public/stylesheets/web-app-theme/themes/default/images/button-background.png",
+    "public/stylesheets/web-app-theme/themes/default/images/menubar-background.png",
+    "public/stylesheets/web-app-theme/themes/default/style.css",
     "test/helper.rb",
     "test/test_app_frame.rb"
   ]

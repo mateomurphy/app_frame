@@ -4,8 +4,8 @@ A skeleton for rails apps
 
 == To do
 
-* Fully implement web_app_theme support
-* Implement menu system
+* Improve web_app_theme support
+* Reduce configuration required by menu system
 
 == Contributing to app_frame
  
