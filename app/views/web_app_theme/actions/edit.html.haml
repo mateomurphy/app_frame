@@ -1,18 +1,7 @@
-.block
-  .secondary-navigation
-    %ul.wat-cf
-      %li.first= link_to "#{t("web-app-theme.list", :default => "List")}", collection_path
-      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_resource_path
-      %li.active= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_resource_path
-  .content
-    %h2.title
-      = t("web-app-theme.edit", :default => "Edit")
-      Post
-    .inner
-      =simple_form_for resource, :html => { :class => :form } do |f|
-        -editable_attributes_for(resource_class).each do |name|
-          =f.attribute name    
-    
-      = form_for resource, :url => resource_path(resource), :html => { :class => :form } do |f|
-        = render :partial => "form", :locals => {:f => f}
+%h2.title
+  = t("web-app-theme.edit", :default => "Edit")
+  Post
+.inner
+  = simple_form_for resource, :html => { :class => :form } do |f|
+    = render :partial => "form", :locals => {:f => f}
 - content_for :sidebar, render(:partial => 'sidebar')

@@ -1,15 +1,9 @@
-.block
-  .secondary-navigation
-    %ul.wat-cf
-      %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", collection_path
-      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_resource_path
-  .content
-    %h2.title
-      = t("web-app-theme.all", :default => "All")
-      Posts
-    .inner
-      =render 'list'
-      .actions-bar.wat-cf
-        .actions
-        = will_paginate collection
+%h2.title
+  = t("web-app-theme.all", :default => "All")
+  Posts
+.inner
+  =render 'list'
+  .actions-bar.wat-cf
+    .actions
+    = will_paginate collection
 - content_for :sidebar, render(:partial => 'sidebar')

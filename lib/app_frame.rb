@@ -6,6 +6,7 @@ require 'simple_form'
 require 'show_for'
 require 'will_paginate'
 require 'table_for'
+require 'simple-navigation'
 
 module AppFrame
   autoload :ControllerMethods, 'app_frame/controller_methods'

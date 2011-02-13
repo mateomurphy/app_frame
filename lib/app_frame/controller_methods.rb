@@ -7,9 +7,11 @@ module AppFrame
   
     module ClassMethods
       def app_frame(options = {})
-        inherit_resources
         layout "#{AppFrame::theme}/#{options[:layout] || 'default'}"
-        include PaginationSupport
+        unless options[:resource] == false
+          inherit_resources
+          include PaginationSupport
+        end
       end
     end
     

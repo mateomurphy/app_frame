@@ -141,16 +141,19 @@ hr {
   padding: 8px 0;
 }
 
+#main-navigation ul li.selected,
 #main-navigation ul li.active {
   padding: 0;
   margin-left: 15px;
 }
 
+#main-navigation ul li.selected,
 #main-navigation ul li.active {
   background: #E5E5E5;
   margin-left: 15px;
 }
 
+#main-navigation ul li.selected a,
 #main-navigation ul li.active a {
   padding: 8px 15px;
 }
@@ -201,6 +204,7 @@ hr {
   background-image: url("images/boxbar-background.png");
 }
 
+.secondary-navigation ul li.selected, .secondary-navigation ul li.selected a:hover,
 .secondary-navigation ul li.active, .secondary-navigation ul li.active a:hover {
   background-color: #fff;
 }

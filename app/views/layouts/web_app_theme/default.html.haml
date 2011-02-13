@@ -19,14 +19,18 @@
             %li
               %a.logout{:href => "/logout"}= t("web-app-theme.logout", :default => "Logout")
         #main-navigation
-          %ul.wat-cf
+          = render_navigation :level => 1
       #wrapper.wat-cf
         .flash
           - flash.each do |type, message|
             %div{:class => "message #{type}"}
               %p= message
         #main
-          = yield
+          .block
+            .secondary-navigation
+              = render_navigation :level => 2
+            .content
+              = yield
           #footer
             .block
               %p

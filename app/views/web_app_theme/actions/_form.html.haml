@@ -1,11 +1,5 @@
-.group
-  = f.label :title, t("activerecord.attributes.post.title", :default => "Title"), :class => :label
-  = f.text_field :title, :class => 'text_field'
-  %span.description Ex: a simple text
-.group
-  = f.label :body, t("activerecord.attributes.post.body", :default => "Body"), :class => :label
-  = f.text_area :body, :class => 'text_area'
-  %span.description Ex: a simple text
+-editable_attributes_for(resource_class).each do |name|
+  =f.attribute name   
 .group.navform.wat-cf
   %button.button{:type => "submit"}
     = image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}")
