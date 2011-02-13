@@ -1,6 +1,6 @@
 %h2.title
   = t("web-app-theme.edit", :default => "Edit")
-  Post
+  = resource_name
 .inner
   = simple_form_for resource, :html => { :class => :form } do |f|
     = render :partial => "form", :locals => {:f => f}

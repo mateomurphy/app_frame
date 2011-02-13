@@ -1,6 +1,6 @@
 %h2.title
   = t("web-app-theme.all", :default => "All")
-  Posts
+  = resource_name.pluralize
 .inner
   =render 'list'
   .actions-bar.wat-cf

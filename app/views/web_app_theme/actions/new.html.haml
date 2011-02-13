@@ -1,7 +1,7 @@
 %h2.title
   = t("web-app-theme.new", :default => "New")
-  Post
+  = resource_name
 .inner
-  = simple_form_for :post, :html => { :class => :form } do |f|
+  = simple_form_for resource, :html => { :class => :form } do |f|
     = render :partial => "form", :locals => {:f => f}
 - content_for :sidebar, render(:partial => 'sidebar')
