@@ -1,14 +1,14 @@
 require 'rails'
 require 'action_controller'
-require 'active_support/core_ext/object/returning' #required for will_paginate
 require 'engine'
 require 'haml'
 require 'inherited_resources'
+require 'kaminari'
 require 'simple_form'
 require 'show_for'
-require 'will_paginate'
 require 'table_for'
 require 'simple-navigation'
+require 'twitter-bootstrap-rails'
 
 module AppFrame
   autoload :ControllerMethods,  'app_frame/controller_methods'
@@ -18,6 +18,6 @@ module AppFrame
   @@app_name = "AppFrame"
   
   def self.theme
-    'web_app_theme'
+    'app_frame'
   end
 end
