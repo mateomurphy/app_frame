@@ -5,8 +5,7 @@ source "http://rubygems.org"
 
 gem 'simple_form'
 gem 'show_for'
-gem 'will_paginate'
-gem 'table_for'
+gem 'kaminari'
 gem 'simple-navigation'
 gem 'inherited_resources'
 gem "haml", ">= 0"
@@ -14,9 +13,10 @@ gem "haml", ">= 0"
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :test, :development do
-  gem "rails", ">= 3"
+  gem "rails", "~> 3.1.1"
   gem "rspec", ">= 0"
   gem "bundler", "~> 1.0.0"
   gem "jeweler", "~> 1.5.2"
   gem "rcov", ">= 0"
+  gem 'log_buddy'
 end
