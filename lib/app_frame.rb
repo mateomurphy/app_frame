@@ -11,9 +11,8 @@ require 'table_for'
 require 'simple-navigation'
 
 module AppFrame
-  autoload :ControllerMethods, 'app_frame/controller_methods'
-  autoload :ViewMethods, 'app_frame/view_methods'
-  autoload :FallbackResolver, 'app_frame/fallback_resolver'
+  autoload :ControllerMethods,  'app_frame/controller_methods'
+  autoload :ViewMethods,        'app_frame/view_methods'
 
   mattr_accessor :app_name
   @@app_name = "AppFrame"
