@@ -3,12 +3,13 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
-gem 'simple_form'
-gem 'show_for'
-gem 'kaminari'
-gem 'simple-navigation'
-gem 'inherited_resources'
 gem "haml", ">= 0"
+gem 'inherited_resources'
+gem 'kaminari'
+gem 'settingslogic'
+gem 'show_for'
+gem 'simple_form'
+gem 'simple-navigation'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
