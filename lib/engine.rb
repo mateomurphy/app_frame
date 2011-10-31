@@ -15,7 +15,7 @@ module AppFrame
     end
     
     initializer "resolver setup" do |app|
-      ActionController::Base.append_view_path AppFrame::FallbackResolver.new("#{config.root}/app/views/#{AppFrame.theme}/actions")
+      ActionController::Base.append_view_path ActionView::FileSystemResolver.new("#{config.root}/app/views/#{AppFrame.theme}/actions", ":action{.:formats,}{.:handlers,}")
     end
     
   end
