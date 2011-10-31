@@ -3,4 +3,12 @@
   %head
     =render '/app_frame/layout/head'
   %body
-    =yield
+    .topbar
+      .fill
+        .container
+          =link_to("Project Name", '#', :class => 'brand')
+          %ul.nav
+            %li.active= link_to("Home")
+    
+    #main.container
+      =yield

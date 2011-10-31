@@ -1,6 +1,6 @@
 %h1 Listing #{resource_name.pluralize}
 
-=link_to("New #{resource_name}", new_resource_url)
+%p= link_to("New #{resource_name}", new_resource_url, :class => 'btn')
 
 %table
   %tr
