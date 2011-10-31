@@ -6,9 +6,9 @@
     .topbar
       .fill
         .container
-          =link_to("Project Name", '#', :class => 'brand')
+          =link_to(Settings.app_name, controller_namespaces + [:root], :class => 'brand')
           %ul.nav
-            %li.active= link_to("Home")
+            =render "/#{controller_namespaces.join("/")}/layout/top_menu"
     
     #main.container
       =yield

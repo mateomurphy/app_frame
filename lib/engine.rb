@@ -7,6 +7,7 @@ module AppFrame
     initializer "rails includes" do |app|
       ActionController::Base.send :include, AppFrame::ControllerMethods
       ActionView::Base.send       :include, AppFrame::ViewMethods
+      ActionView::Base.send       :include, AppFrame::MenuHelper
     end
     
     initializer "gem setup" do |app|

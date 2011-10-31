@@ -16,16 +16,21 @@ module TableFor
       end
     end
     
-    def link_to(string, resource)
+    def link_to(string, resource, html_options = {})
       url = if @options[:link_to].respond_to?(:call)
         @options[:link_to].call(resource)
       elsif @options[:link_to].is_a?(Symbol)
         @builder.template.send(@options[:link_to], resource)
       else
-        resource
+        @builder.namespace + [resource]
       end
       
-      @builder.template.link_to(string,  url, :method => @options[:method], :confirm => @options[:confirm], :remote => @options[:remote])
+      html_options[:method] ||= @options[:method]
+      html_options[:confirm] ||= @options[:confirm]
+      html_options[:remote] ||= @options[:remote]
+      html_options[:class] ||= @options[:class]
+      
+      @builder.template.link_to(string,  url, html_options)
     end
   end
 end

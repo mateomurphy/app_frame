@@ -2,15 +2,8 @@
 
 %p= link_to("New #{resource_name}", new_resource_url, :class => 'btn')
 
-%table
-  %tr
-    -editable_attributes_for(resource_class).each do |name|
-      %th= name.humanize
-    %th{:colspan => 2} &nbsp;
-  -collection.each do |resource|
-    %tr
-      -editable_attributes_for(resource_class).each do |name|
-        %td= resource.send(name)
-      %td= link_to("Edit", edit_resource_url(resource))
-      %td= link_to("Delete", resource_url(resource), :method => :delete, :confirm => "Are you sure?")
+= table_for(controller_namespaces + [resource_class], collection) do |t|
+  =render 'table', :t => t
+  
+= paginate collection, :theme => 'app_frame'
   

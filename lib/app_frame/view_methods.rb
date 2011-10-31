@@ -16,6 +16,12 @@ module AppFrame
       klass.column_names
     end
 
+    def controller_namespaces
+      result = controller.class.to_s.split('::')
+      result.pop
+      result.map(&:underscore)
+    end
+
     module ClassMethods
 
     end

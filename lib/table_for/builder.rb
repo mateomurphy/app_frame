@@ -5,11 +5,24 @@ module TableFor
     delegate :content_tag, :cycle, :to => :template
     
     def initialize(resource_class, collection, template, &block)
-      @resource_class, @collection, @template = resource_class, collection, template
+      @collection, @template = collection, template
+      
+      if resource_class.is_a?(Array)
+        @namespace = resource_class
+        @resource_class = @namespace.pop
+      else
+        @namespace = []
+        @resource_class = resource_class
+      end
+      
       @columns = []
       @actions = []
       
       block.call(self)
+    end
+    
+    def namespace
+      @namespace
     end
     
     def attribute(name, options = {}, &block)
@@ -27,7 +40,7 @@ module TableFor
         result << content_tag(:th, column.label(@resource_class), :class => html_class)
         html_class = nil
       end
-      result << content_tag(:th, "&nbsp;".html_safe, :class => 'last') if @actions.any?
+      result << content_tag(:th, "Actions", :class => 'last') if @actions.any?
 
       content_tag(:tr, result.html_safe) << "\n"
     end
@@ -49,7 +62,7 @@ module TableFor
         result << action.content(resource)
       end
       
-      result.join(" | ").html_safe
+      result.join("&nbsp;").html_safe
     end
   
     def to_s
