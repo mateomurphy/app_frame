@@ -18,7 +18,7 @@ module AppFrame
     module PaginationSupport
       # paginate collection
       def collection
-        get_collection_ivar || set_collection_ivar(end_of_association_chain.scoped.paginate(:page => params[:page], :per_page => per_page))
+        get_collection_ivar || set_collection_ivar(end_of_association_chain.page(params[:page]).per(per_page))
       end
 
       def per_page
