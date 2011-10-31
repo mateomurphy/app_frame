@@ -28,6 +28,7 @@ Jeweler::Tasks.new do |gem|
   gem.add_runtime_dependency 'kaminari', '> 0.1'
   gem.add_runtime_dependency 'simple-navigation', '> 0.1'
   gem.add_runtime_dependency 'twitter-bootstrap-rails'
+  gem.add_runtime_dependency 'settingslogic'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new

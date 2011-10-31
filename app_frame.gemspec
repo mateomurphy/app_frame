@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-10-30}
+  s.date = %q{2011-10-31}
   s.description = %q{TODO: longer description of your gem}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
@@ -18,12 +18,14 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
+    ".rspec",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "app/assets/stylesheets/app_frame/application.scss",
     "app/views/app_frame/actions/_form.html.haml",
     "app/views/app_frame/actions/edit.html.haml",
     "app/views/app_frame/actions/index.html.haml",
@@ -43,8 +45,22 @@ Gem::Specification.new do |s|
     "app_frame.gemspec",
     "lib/app_frame.rb",
     "lib/app_frame/controller_methods.rb",
-    "lib/app_frame/fallback_resolver.rb",
     "lib/app_frame/view_methods.rb",
+    "lib/assets/images/web-app-theme/avatar.png",
+    "lib/assets/images/web-app-theme/icons/application_edit.png",
+    "lib/assets/images/web-app-theme/icons/cross.png",
+    "lib/assets/images/web-app-theme/icons/key.png",
+    "lib/assets/images/web-app-theme/icons/tick.png",
+    "lib/assets/javascripts/app_frame/application.js",
+    "lib/assets/stylesheets/app_frame/application.css",
+    "lib/assets/stylesheets/web-app-theme/base.css",
+    "lib/assets/stylesheets/web-app-theme/override.css",
+    "lib/assets/stylesheets/web-app-theme/themes/default/images/arrow.png",
+    "lib/assets/stylesheets/web-app-theme/themes/default/images/boxbar-background.png",
+    "lib/assets/stylesheets/web-app-theme/themes/default/images/button-background-active.png",
+    "lib/assets/stylesheets/web-app-theme/themes/default/images/button-background.png",
+    "lib/assets/stylesheets/web-app-theme/themes/default/images/menubar-background.png",
+    "lib/assets/stylesheets/web-app-theme/themes/default/style.css",
     "lib/engine.rb",
     "lib/table_for.rb",
     "lib/table_for/action.rb",
@@ -58,7 +74,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/mateomurphy/app_frame}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
+  s.rubygems_version = %q{1.5.3}
   s.summary = %q{TODO: one-line summary of your gem}
   s.test_files = [
     "spec/app_frame_spec.rb",
@@ -69,12 +85,13 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<simple_form>, [">= 0"])
-      s.add_runtime_dependency(%q<show_for>, [">= 0"])
-      s.add_runtime_dependency(%q<kaminari>, [">= 0"])
-      s.add_runtime_dependency(%q<simple-navigation>, [">= 0"])
-      s.add_runtime_dependency(%q<inherited_resources>, [">= 0"])
       s.add_runtime_dependency(%q<haml>, [">= 0"])
+      s.add_runtime_dependency(%q<inherited_resources>, [">= 0"])
+      s.add_runtime_dependency(%q<kaminari>, [">= 0"])
+      s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
+      s.add_runtime_dependency(%q<show_for>, [">= 0"])
+      s.add_runtime_dependency(%q<simple_form>, [">= 0"])
+      s.add_runtime_dependency(%q<simple-navigation>, [">= 0"])
       s.add_development_dependency(%q<rails>, ["~> 3.1.1"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -88,13 +105,15 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<kaminari>, ["> 0.1"])
       s.add_runtime_dependency(%q<simple-navigation>, ["> 0.1"])
       s.add_runtime_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
+      s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
     else
-      s.add_dependency(%q<simple_form>, [">= 0"])
-      s.add_dependency(%q<show_for>, [">= 0"])
-      s.add_dependency(%q<kaminari>, [">= 0"])
-      s.add_dependency(%q<simple-navigation>, [">= 0"])
-      s.add_dependency(%q<inherited_resources>, [">= 0"])
       s.add_dependency(%q<haml>, [">= 0"])
+      s.add_dependency(%q<inherited_resources>, [">= 0"])
+      s.add_dependency(%q<kaminari>, [">= 0"])
+      s.add_dependency(%q<settingslogic>, [">= 0"])
+      s.add_dependency(%q<show_for>, [">= 0"])
+      s.add_dependency(%q<simple_form>, [">= 0"])
+      s.add_dependency(%q<simple-navigation>, [">= 0"])
       s.add_dependency(%q<rails>, ["~> 3.1.1"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -108,14 +127,16 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<kaminari>, ["> 0.1"])
       s.add_dependency(%q<simple-navigation>, ["> 0.1"])
       s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
+      s.add_dependency(%q<settingslogic>, [">= 0"])
     end
   else
-    s.add_dependency(%q<simple_form>, [">= 0"])
-    s.add_dependency(%q<show_for>, [">= 0"])
-    s.add_dependency(%q<kaminari>, [">= 0"])
-    s.add_dependency(%q<simple-navigation>, [">= 0"])
-    s.add_dependency(%q<inherited_resources>, [">= 0"])
     s.add_dependency(%q<haml>, [">= 0"])
+    s.add_dependency(%q<inherited_resources>, [">= 0"])
+    s.add_dependency(%q<kaminari>, [">= 0"])
+    s.add_dependency(%q<settingslogic>, [">= 0"])
+    s.add_dependency(%q<show_for>, [">= 0"])
+    s.add_dependency(%q<simple_form>, [">= 0"])
+    s.add_dependency(%q<simple-navigation>, [">= 0"])
     s.add_dependency(%q<rails>, ["~> 3.1.1"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -129,6 +150,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<kaminari>, ["> 0.1"])
     s.add_dependency(%q<simple-navigation>, ["> 0.1"])
     s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
+    s.add_dependency(%q<settingslogic>, [">= 0"])
   end
 end
 
