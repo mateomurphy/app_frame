@@ -1,5 +1,5 @@
-module TableFor
-  class Attribute < Column
+module DisplayFor
+  class Attribute < Element
     def label(resource_class)
       resource_class.human_attribute_name(@name.to_s)
     end

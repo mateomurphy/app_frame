@@ -1,5 +1,5 @@
-module TableFor
-  class Column
+module DisplayFor
+  class Element
     def initialize(builder, name, options = {}, &block)
       @builder, @name, @options, @block = builder, name, options, block
     end
@@ -25,10 +25,10 @@ module TableFor
         @builder.namespace + [resource]
       end
       
-      html_options[:method] ||= @options[:method]
+      html_options[:method]  ||= @options[:method]
       html_options[:confirm] ||= @options[:confirm]
-      html_options[:remote] ||= @options[:remote]
-      html_options[:class] ||= @options[:class]
+      html_options[:remote]  ||= @options[:remote]
+      html_options[:class]   ||= @options[:class]
       
       @builder.template.link_to(string,  url, html_options)
     end
