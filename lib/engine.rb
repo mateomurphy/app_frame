@@ -13,6 +13,10 @@ module AppFrame
     initializer "gem setup" do |app|
       ShowFor.separator = ""
       ShowFor.label_proc = lambda { |l| l.titleize + ": " }
+      SimpleForm.setup do |config|
+        config.wrapper_class = :clearfix
+        config.form_class = :'form-stacked'
+      end
     end
     
     initializer "resolver setup" do |app|

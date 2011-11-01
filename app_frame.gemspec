@@ -25,13 +25,25 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "app/assets/javascripts/app_frame/application.js",
     "app/assets/stylesheets/app_frame/application.scss",
+    "app/helpers/app_frame/menu_helper.rb",
+    "app/models/settings.rb",
     "app/views/app_frame/actions/_form.html.haml",
+    "app/views/app_frame/actions/_table.html.haml",
     "app/views/app_frame/actions/edit.html.haml",
     "app/views/app_frame/actions/index.html.haml",
     "app/views/app_frame/actions/new.html.haml",
     "app/views/app_frame/actions/show.html.haml",
     "app/views/app_frame/layout/_head.html.haml",
+    "app/views/app_frame/layout/_top_menu.html.haml",
+    "app/views/kaminari/app_frame/_first_page.html.haml",
+    "app/views/kaminari/app_frame/_gap.html.haml",
+    "app/views/kaminari/app_frame/_last_page.html.haml",
+    "app/views/kaminari/app_frame/_next_page.html.haml",
+    "app/views/kaminari/app_frame/_page.html.haml",
+    "app/views/kaminari/app_frame/_paginator.html.haml",
+    "app/views/kaminari/app_frame/_prev_page.html.haml",
     "app/views/layouts/app_frame/default.html.haml",
     "app/views/layouts/web_app_theme/default.html.haml",
     "app/views/web_app_theme/actions/_form.html.haml",
@@ -62,19 +74,13 @@ Gem::Specification.new do |s|
     "lib/assets/stylesheets/web-app-theme/themes/default/images/menubar-background.png",
     "lib/assets/stylesheets/web-app-theme/themes/default/style.css",
     "lib/engine.rb",
-    "lib/table_for.rb",
-    "lib/table_for/action.rb",
-    "lib/table_for/attribute.rb",
-    "lib/table_for/builder.rb",
-    "lib/table_for/column.rb",
-    "lib/table_for/helper.rb",
     "spec/app_frame_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/mateomurphy/app_frame}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.3}
+  s.rubygems_version = %q{1.5.2}
   s.summary = %q{TODO: one-line summary of your gem}
   s.test_files = [
     "spec/app_frame_spec.rb",
@@ -91,7 +97,6 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
       s.add_runtime_dependency(%q<show_for>, [">= 0"])
       s.add_runtime_dependency(%q<simple_form>, [">= 0"])
-      s.add_runtime_dependency(%q<simple-navigation>, [">= 0"])
       s.add_development_dependency(%q<rails>, ["~> 3.1.1"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -101,10 +106,9 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<haml>, ["> 0.1"])
       s.add_runtime_dependency(%q<inherited_resources>, ["> 0.1"])
       s.add_runtime_dependency(%q<simple_form>, ["> 0.1"])
-      s.add_runtime_dependency(%q<show_for>, ["> 0.1"])
       s.add_runtime_dependency(%q<kaminari>, ["> 0.1"])
-      s.add_runtime_dependency(%q<simple-navigation>, ["> 0.1"])
       s.add_runtime_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
+      s.add_runtime_dependency(%q<show_for>, [">= 0"])
       s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
     else
       s.add_dependency(%q<haml>, [">= 0"])
@@ -113,7 +117,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<settingslogic>, [">= 0"])
       s.add_dependency(%q<show_for>, [">= 0"])
       s.add_dependency(%q<simple_form>, [">= 0"])
-      s.add_dependency(%q<simple-navigation>, [">= 0"])
       s.add_dependency(%q<rails>, ["~> 3.1.1"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -123,10 +126,9 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<haml>, ["> 0.1"])
       s.add_dependency(%q<inherited_resources>, ["> 0.1"])
       s.add_dependency(%q<simple_form>, ["> 0.1"])
-      s.add_dependency(%q<show_for>, ["> 0.1"])
       s.add_dependency(%q<kaminari>, ["> 0.1"])
-      s.add_dependency(%q<simple-navigation>, ["> 0.1"])
       s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
+      s.add_dependency(%q<show_for>, [">= 0"])
       s.add_dependency(%q<settingslogic>, [">= 0"])
     end
   else
@@ -136,7 +138,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<settingslogic>, [">= 0"])
     s.add_dependency(%q<show_for>, [">= 0"])
     s.add_dependency(%q<simple_form>, [">= 0"])
-    s.add_dependency(%q<simple-navigation>, [">= 0"])
     s.add_dependency(%q<rails>, ["~> 3.1.1"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -146,10 +147,9 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<haml>, ["> 0.1"])
     s.add_dependency(%q<inherited_resources>, ["> 0.1"])
     s.add_dependency(%q<simple_form>, ["> 0.1"])
-    s.add_dependency(%q<show_for>, ["> 0.1"])
     s.add_dependency(%q<kaminari>, ["> 0.1"])
-    s.add_dependency(%q<simple-navigation>, ["> 0.1"])
     s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
+    s.add_dependency(%q<show_for>, [">= 0"])
     s.add_dependency(%q<settingslogic>, [">= 0"])
   end
 end

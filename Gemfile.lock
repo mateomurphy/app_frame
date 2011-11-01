@@ -95,8 +95,6 @@ GEM
     rspec-mocks (2.7.0)
     settingslogic (2.0.6)
     show_for (0.2.4)
-    simple-navigation (3.5.0)
-      activesupport (>= 2.3.2)
     simple_form (1.5.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -126,5 +124,4 @@ DEPENDENCIES
   rspec
   settingslogic
   show_for
-  simple-navigation
   simple_form
