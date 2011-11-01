@@ -1,5 +1,5 @@
 - attributes_for(resource_class).each do |name|
   - t.attribute name, :format => :long
-- t.action :show, :link_to => :resource_path
-- t.action :edit, :link_to => :edit_resource_path
-- t.action :delete, :method => :delete, :confirm => "Are you sure?"
+- t.action :show, :link_to => :resource_path, :class => 'btn small'
+- t.action :edit, :link_to => :edit_resource_path, :class => 'btn small'
+- t.action :delete, :method => :delete, :confirm => "Are you sure?", :class => 'btn small danger'
