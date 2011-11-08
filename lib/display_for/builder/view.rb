@@ -3,6 +3,15 @@ module DisplayFor
     class View < ResourceBase
       attr_reader :template
     
+      def build_header
+        result = ''
+
+        result << content_tag(:th, "Attribute")
+        result << content_tag(:th, "Value")
+
+        content_tag(:thead, content_tag(:tr, result.html_safe)) << "\n"
+      end    
+    
       def build_row(attribute)
         result = ''.html_safe
         result << content_tag(:th, attribute.label(resource_class))
@@ -24,7 +33,8 @@ module DisplayFor
       end
   
       def to_s
-        result = ''.html_safe
+        result = build_header
+        
         @attributes.each do |attribute|
           result << build_row(attribute)
         end

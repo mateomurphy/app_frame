@@ -16,11 +16,11 @@ module DisplayFor
       end
       
       def attribute(name, options = {}, &block)
-        @attributes << Attribute.new(self, name, options, &block)
+        @attributes << Element::Attribute.new(self, name, options, &block)
       end
     
       def action(name, options = {}, &block)
-        @actions << Action.new(self, name, options, &block)
+        @actions << Element::Action.new(self, name, options, &block)
       end
       
     end

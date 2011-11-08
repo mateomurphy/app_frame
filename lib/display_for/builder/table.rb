@@ -10,7 +10,7 @@ module DisplayFor
         end
         result << content_tag(:th, "Actions", :class => 'last') if @actions.any?
 
-        content_tag(:tr, result.html_safe) << "\n"
+        content_tag(:thead, content_tag(:tr, result.html_safe)) << "\n"
       end
     
       def build_row(resource)
@@ -34,10 +34,13 @@ module DisplayFor
       end
   
       def to_s
-        result = build_header
+        result = ''.html_safe
+        
         @collection.each do |resource|
           result << build_row(resource)
         end
+
+        result = build_header + content_tag(:tbody, result)
 
         content_tag(:table, result, :class => 'bordered-table zebra-striped').html_safe
       end
