@@ -1,44 +1,13 @@
 module DisplayFor
   module Builder
-    class Table
+    class Table < CollectionBase
       attr_reader :template
-    
-      delegate :content_tag, :cycle, :to => :template
-    
-      def initialize(resource_class, collection, template, &block)
-        @collection, @template = collection, template
-      
-        if resource_class.is_a?(Array)
-          @namespace = resource_class
-          @resource_class = @namespace.pop
-        else
-          @namespace = []
-          @resource_class = resource_class
-        end
-      
-        @columns = []
-        @actions = []
-      
-        block.call(self)
-      end
-    
-      def namespace
-        @namespace
-      end
-    
-      def attribute(name, options = {}, &block)
-        @columns << Attribute.new(self, name, options, &block)
-      end
-    
-      def action(name, options = {}, &block)
-        @actions << Action.new(self, name, options, &block)
-      end
     
       def build_header
         result = ''
         html_class = 'first'
-        @columns.each do |column|
-          result << content_tag(:th, column.label(@resource_class), :class => html_class)
+        @attributes.each do |attribute|
+          result << content_tag(:th, attribute.label(@resource_class), :class => html_class)
           html_class = nil
         end
         result << content_tag(:th, "Actions", :class => 'last') if @actions.any?
@@ -48,8 +17,8 @@ module DisplayFor
     
       def build_row(resource)
         result = ''
-        @columns.each do |column|
-          result << content_tag(:td, column.content(resource))
+        @attributes.each do |attribute|
+          result << content_tag(:td, attribute.content(resource))
         end
         result << content_tag(:td, build_actions(resource), :class => 'last') if @actions.any?
 
