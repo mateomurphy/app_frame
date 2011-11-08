@@ -1,8 +1,5 @@
 .page-header
   %h1 Showing #{resource_name}
 
-= show_for resource do |s|
+= view_for controller_namespaces + [resource] do |s|
   = render 'show', :s => s
-  
-= link_to "Edit #{resource_name}", edit_resource_url, :class => 'btn'
-= link_to "List #{resource_name.pluralize}", collection_url, :class => 'btn'

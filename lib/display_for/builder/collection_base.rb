@@ -1,6 +1,8 @@
 module DisplayFor
   module Builder
     class CollectionBase < Base
+      attr_reader :collection
+      
       def initialize(resource_class, collection, template, &block)
         @collection = collection
       

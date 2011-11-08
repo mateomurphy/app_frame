@@ -1,7 +1,7 @@
 module DisplayFor
   module Builder
     class Base
-      attr_reader :template, :namespace
+      attr_reader :template, :namespace, :resource_class
       
       delegate :content_tag, :cycle, :to => :template      
       
@@ -9,6 +9,8 @@ module DisplayFor
         @template = template
         @attributes = []
         @actions = []
+      
+        raise "invalid resource class #{resource_class}" unless resource_class.respond_to?(:human_attribute_name)
       
         block.call(self)
       end

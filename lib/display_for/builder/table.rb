@@ -1,8 +1,6 @@
 module DisplayFor
   module Builder
     class Table < CollectionBase
-      attr_reader :template
-    
       def build_header
         result = ''
         html_class = 'first'
@@ -22,7 +20,7 @@ module DisplayFor
         end
         result << content_tag(:td, build_actions(resource), :class => 'last') if @actions.any?
 
-        content_tag(:tr, result.html_safe, :class => cycle('odd', 'even')) << "\n"
+        content_tag(:tr, result.html_safe) << "\n"
       end
     
       def build_actions(resource)
@@ -41,7 +39,7 @@ module DisplayFor
           result << build_row(resource)
         end
 
-        content_tag(:table, result, :class => 'table').html_safe
+        content_tag(:table, result, :class => 'bordered-table zebra-striped').html_safe
       end
     end
   end

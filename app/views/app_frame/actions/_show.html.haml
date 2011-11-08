@@ -1,2 +1,5 @@
 - editable_attributes_for(resource_class).each do |name|
-  = s.attribute name
+  - s.attribute name
+- s.action :list, :link_to => :collection_path, :class => 'btn small'
+- s.action :edit, :link_to => :edit_resource_path, :class => 'btn small'
+- s.action :delete, :method => :delete, :confirm => "Are you sure?", :class => 'btn small danger'  
