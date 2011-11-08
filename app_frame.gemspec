@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-10-31}
-  s.description = %q{TODO: longer description of your gem}
+  s.date = %q{2011-11-07}
+  s.description = %q{An app framework}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
     "app/helpers/app_frame/menu_helper.rb",
     "app/models/settings.rb",
     "app/views/app_frame/actions/_form.html.haml",
+    "app/views/app_frame/actions/_show.html.haml",
     "app/views/app_frame/actions/_table.html.haml",
     "app/views/app_frame/actions/edit.html.haml",
     "app/views/app_frame/actions/index.html.haml",
@@ -73,6 +74,12 @@ Gem::Specification.new do |s|
     "lib/assets/stylesheets/web-app-theme/themes/default/images/button-background.png",
     "lib/assets/stylesheets/web-app-theme/themes/default/images/menubar-background.png",
     "lib/assets/stylesheets/web-app-theme/themes/default/style.css",
+    "lib/display_for.rb",
+    "lib/display_for/action.rb",
+    "lib/display_for/attribute.rb",
+    "lib/display_for/builder/table.rb",
+    "lib/display_for/element.rb",
+    "lib/display_for/helper.rb",
     "lib/engine.rb",
     "spec/app_frame_spec.rb",
     "spec/spec_helper.rb"
@@ -80,8 +87,8 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/mateomurphy/app_frame}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.rubygems_version = %q{1.5.3}
+  s.summary = %q{An app framework}
   s.test_files = [
     "spec/app_frame_spec.rb",
     "spec/spec_helper.rb"

@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "app_frame"
   gem.homepage = "http://github.com/mateomurphy/app_frame"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{An app framework}
+  gem.description = %Q{An app framework}
   gem.email = "mateo.murphy@gmail.com"
   gem.authors = ["Mateo Murphy"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
