@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-11-07}
+  s.date = %q{2011-11-08}
   s.description = %q{An app framework}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
@@ -75,10 +75,16 @@ Gem::Specification.new do |s|
     "lib/assets/stylesheets/web-app-theme/themes/default/images/menubar-background.png",
     "lib/assets/stylesheets/web-app-theme/themes/default/style.css",
     "lib/display_for.rb",
-    "lib/display_for/action.rb",
-    "lib/display_for/attribute.rb",
+    "lib/display_for/builder.rb",
+    "lib/display_for/builder/base.rb",
+    "lib/display_for/builder/collection_base.rb",
+    "lib/display_for/builder/resource_base.rb",
     "lib/display_for/builder/table.rb",
+    "lib/display_for/builder/view.rb",
     "lib/display_for/element.rb",
+    "lib/display_for/element/action.rb",
+    "lib/display_for/element/attribute.rb",
+    "lib/display_for/element/base.rb",
     "lib/display_for/helper.rb",
     "lib/engine.rb",
     "spec/app_frame_spec.rb",
@@ -98,66 +104,48 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<ckeditor-rails>, [">= 0"])
       s.add_runtime_dependency(%q<haml>, [">= 0"])
       s.add_runtime_dependency(%q<inherited_resources>, [">= 0"])
       s.add_runtime_dependency(%q<kaminari>, [">= 0"])
       s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
-      s.add_runtime_dependency(%q<show_for>, [">= 0"])
       s.add_runtime_dependency(%q<simple_form>, [">= 0"])
+      s.add_runtime_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
       s.add_development_dependency(%q<rails>, ["~> 3.1.1"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<log_buddy>, [">= 0"])
-      s.add_runtime_dependency(%q<haml>, ["> 0.1"])
-      s.add_runtime_dependency(%q<inherited_resources>, ["> 0.1"])
-      s.add_runtime_dependency(%q<simple_form>, ["> 0.1"])
-      s.add_runtime_dependency(%q<kaminari>, ["> 0.1"])
-      s.add_runtime_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
-      s.add_runtime_dependency(%q<show_for>, [">= 0"])
-      s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
     else
+      s.add_dependency(%q<ckeditor-rails>, [">= 0"])
       s.add_dependency(%q<haml>, [">= 0"])
       s.add_dependency(%q<inherited_resources>, [">= 0"])
       s.add_dependency(%q<kaminari>, [">= 0"])
       s.add_dependency(%q<settingslogic>, [">= 0"])
-      s.add_dependency(%q<show_for>, [">= 0"])
       s.add_dependency(%q<simple_form>, [">= 0"])
+      s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
       s.add_dependency(%q<rails>, ["~> 3.1.1"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<log_buddy>, [">= 0"])
-      s.add_dependency(%q<haml>, ["> 0.1"])
-      s.add_dependency(%q<inherited_resources>, ["> 0.1"])
-      s.add_dependency(%q<simple_form>, ["> 0.1"])
-      s.add_dependency(%q<kaminari>, ["> 0.1"])
-      s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
-      s.add_dependency(%q<show_for>, [">= 0"])
-      s.add_dependency(%q<settingslogic>, [">= 0"])
     end
   else
+    s.add_dependency(%q<ckeditor-rails>, [">= 0"])
     s.add_dependency(%q<haml>, [">= 0"])
     s.add_dependency(%q<inherited_resources>, [">= 0"])
     s.add_dependency(%q<kaminari>, [">= 0"])
     s.add_dependency(%q<settingslogic>, [">= 0"])
-    s.add_dependency(%q<show_for>, [">= 0"])
     s.add_dependency(%q<simple_form>, [">= 0"])
+    s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
     s.add_dependency(%q<rails>, ["~> 3.1.1"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<log_buddy>, [">= 0"])
-    s.add_dependency(%q<haml>, ["> 0.1"])
-    s.add_dependency(%q<inherited_resources>, ["> 0.1"])
-    s.add_dependency(%q<simple_form>, ["> 0.1"])
-    s.add_dependency(%q<kaminari>, ["> 0.1"])
-    s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
-    s.add_dependency(%q<show_for>, [">= 0"])
-    s.add_dependency(%q<settingslogic>, [">= 0"])
   end
 end
 

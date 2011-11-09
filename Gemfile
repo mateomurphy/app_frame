@@ -3,12 +3,13 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
+gem 'ckeditor-rails'
 gem "haml", ">= 0"
 gem 'inherited_resources'
 gem 'kaminari'
 gem 'settingslogic'
-gem 'show_for'
 gem 'simple_form'
+gem 'twitter-bootstrap-rails'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
