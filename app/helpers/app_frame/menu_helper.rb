@@ -2,9 +2,17 @@ module AppFrame
   module MenuHelper
     def menu_link(key, path, options = {}, &block)
       if options[:highlights_on]
-        options[:class] = 'active' if request.path =~ options.delete(:highlights_on)
+        active = request.path =~ options.delete(:highlights_on)
       else
-        options[:class] = 'active' if request.path =~ /#{path}/
+        active = request.path =~ /#{path}/
+      end
+    
+      if active
+        if options[:class]
+          options[:class] << ' active'
+        else
+          options[:class] = 'active'
+        end
       end
     
       key = t(:"menu.#{key}") if key.is_a?(Symbol)
