@@ -11,8 +11,6 @@ module AppFrame
     end
     
     initializer "gem setup" do |app|
-      ShowFor.separator = ""
-      ShowFor.label_proc = lambda { |l| l.titleize + ": " }
       SimpleForm.setup do |config|
         config.wrapper_class = :clearfix
         config.form_class = :'form-stacked'
