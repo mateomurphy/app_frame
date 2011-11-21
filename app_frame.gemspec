@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-11-08}
+  s.date = %q{2011-11-21}
   s.description = %q{An app framework}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "app/assets/javascripts/app_frame/application.js",
     "app/assets/stylesheets/app_frame/application.scss",
+    "app/helpers/app_frame/bootstrap_helper.rb",
     "app/helpers/app_frame/menu_helper.rb",
     "app/models/settings.rb",
     "app/views/app_frame/actions/_form.html.haml",
@@ -36,6 +37,7 @@ Gem::Specification.new do |s|
     "app/views/app_frame/actions/index.html.haml",
     "app/views/app_frame/actions/new.html.haml",
     "app/views/app_frame/actions/show.html.haml",
+    "app/views/app_frame/layout/_flashes.html.haml",
     "app/views/app_frame/layout/_head.html.haml",
     "app/views/app_frame/layout/_top_menu.html.haml",
     "app/views/kaminari/app_frame/_first_page.html.haml",
@@ -64,8 +66,6 @@ Gem::Specification.new do |s|
     "lib/assets/images/web-app-theme/icons/cross.png",
     "lib/assets/images/web-app-theme/icons/key.png",
     "lib/assets/images/web-app-theme/icons/tick.png",
-    "lib/assets/javascripts/app_frame/application.js",
-    "lib/assets/stylesheets/app_frame/application.css",
     "lib/assets/stylesheets/web-app-theme/base.css",
     "lib/assets/stylesheets/web-app-theme/override.css",
     "lib/assets/stylesheets/web-app-theme/themes/default/images/arrow.png",
