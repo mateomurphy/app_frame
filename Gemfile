@@ -10,6 +10,7 @@ gem 'kaminari'
 gem 'settingslogic'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails'
+gem 'libv8', '3.3.10.2'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
