@@ -1,10 +1,11 @@
 module AppFrame
   module MenuHelper
     def menu_link(key, path, options = {}, &block)
-      if options[:highlights_on]
-        active = request.path =~ options.delete(:highlights_on)
-      else
-        active = request.path =~ /#{path}/
+      active = false
+      highlight = options.delete(:highlights_on) || /#{path}/
+
+      Array(highlight).each do |regex|
+        active = true if request.path =~ regex
       end
     
       if active
