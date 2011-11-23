@@ -7,7 +7,7 @@
 }
 
 table .last {
-    width: 150px;
+    width: 100px;
 }
 
 td.last {
@@ -16,4 +16,8 @@ td.last {
 
 select {
     width: auto;
+}
+
+.page-actions {
+  float: right;
 }

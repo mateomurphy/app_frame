@@ -1,7 +1,9 @@
 .page-header
+  .page-actions
+    =link_to("New #{resource_name}", new_resource_url, :class => 'btn')
   %h1 Listing #{resource_name.pluralize}
 
-%p= link_to("New #{resource_name}", new_resource_url, :class => 'btn')
+
 
 = table_for(controller_namespaces + [resource_class], collection) do |t|
   = render 'table', :t => t
