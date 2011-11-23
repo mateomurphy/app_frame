@@ -17,6 +17,11 @@ module DisplayFor
         super(template, &block)
       end
       
+      def default_actions
+        action :show, :link_to => :resource_path, :class => 'small btn'
+        action :edit, :link_to => :edit_resource_path, :class => 'small btn'
+        action :delete, :method => :delete, :confirm => "Are you sure?", :class => 'small btn danger'
+      end
     end
   end
 end
