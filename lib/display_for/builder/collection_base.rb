@@ -18,9 +18,9 @@ module DisplayFor
       end
       
       def default_actions
-        action :show, :link_to => :resource_path, :class => 'small btn'
-        action :edit, :link_to => :edit_resource_path, :class => 'small btn'
-        action :delete, :method => :delete, :confirm => "Are you sure?", :class => 'small btn danger'
+        action :show, :link_to => :resource_path
+        action :edit, :link_to => :edit_resource_path
+        action :delete, :method => :delete, :confirm => "Are you sure?"
       end
     end
   end
