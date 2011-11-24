@@ -5,13 +5,17 @@
   %body
     .topbar
       .fill
-        .container
+        .container-fluid
           =link_to(Settings.app_name, controller_namespaces + [:root], :class => 'brand')
           %ul.nav
             =render "/#{controller_namespaces.join("/")}/layout/top_menu"
           %ul.nav.secondary-nav
             =render "/#{controller_namespaces.join("/")}/layout/secondary_menu"
     
-    #main.container
-      =render '/app_frame/layout/flashes'
-      =yield
+    #main.container-fluid
+      .content
+        =render '/app_frame/layout/flashes'
+        =yield
+      .sidebar
+        =render 'sidebar'
+        

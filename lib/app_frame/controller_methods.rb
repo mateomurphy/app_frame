@@ -1,8 +1,8 @@
 module AppFrame
   
   module ControllerMethods
-    def self.included(klass)
-      klass.extend(ClassMethods)
+    def self.included(base)
+      base.extend(ClassMethods)
     end
   
     module ClassMethods
@@ -16,14 +16,28 @@ module AppFrame
     end
     
     module PaginationSupport
+      
+      def self.included(base)
+        base.helper_method :count, :page, :per_page
+      end
+      
       # paginate collection
       def collection
-        get_collection_ivar || set_collection_ivar(end_of_association_chain.page(params[:page]).per(per_page))
+        get_collection_ivar || set_collection_ivar(end_of_association_chain.page(page).per(per_page))
+      end
+
+      def page
+        (params[:page] || 1).to_i
       end
 
       def per_page
         20
-      end    
+      end
+      
+      def count
+        @count ||= end_of_association_chain.count
+      end
+      
     end
     
   end
