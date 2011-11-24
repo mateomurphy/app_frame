@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-11-21}
+  s.date = %q{2011-11-24}
   s.description = %q{An app framework}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
@@ -29,9 +29,12 @@ Gem::Specification.new do |s|
     "app/assets/stylesheets/app_frame/application.scss",
     "app/helpers/app_frame/bootstrap_helper.rb",
     "app/helpers/app_frame/menu_helper.rb",
+    "app/helpers/app_frame/pagination_helper.rb",
+    "app/helpers/app_frame/scopes_helper.rb",
     "app/models/settings.rb",
     "app/views/app_frame/actions/_form.html.haml",
     "app/views/app_frame/actions/_show.html.haml",
+    "app/views/app_frame/actions/_sidebar.html.haml",
     "app/views/app_frame/actions/_table.html.haml",
     "app/views/app_frame/actions/edit.html.haml",
     "app/views/app_frame/actions/index.html.haml",
@@ -39,6 +42,7 @@ Gem::Specification.new do |s|
     "app/views/app_frame/actions/show.html.haml",
     "app/views/app_frame/layout/_flashes.html.haml",
     "app/views/app_frame/layout/_head.html.haml",
+    "app/views/app_frame/layout/_secondary_menu.html.haml",
     "app/views/app_frame/layout/_top_menu.html.haml",
     "app/views/kaminari/app_frame/_first_page.html.haml",
     "app/views/kaminari/app_frame/_gap.html.haml",
@@ -110,6 +114,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<kaminari>, [">= 0"])
       s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
       s.add_runtime_dependency(%q<simple_form>, [">= 0"])
+      s.add_runtime_dependency(%q<squeel>, [">= 0"])
       s.add_runtime_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
       s.add_runtime_dependency(%q<libv8>, ["= 3.3.10.2"])
       s.add_development_dependency(%q<rails>, ["~> 3.1.1"])
@@ -125,6 +130,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<kaminari>, [">= 0"])
       s.add_dependency(%q<settingslogic>, [">= 0"])
       s.add_dependency(%q<simple_form>, [">= 0"])
+      s.add_dependency(%q<squeel>, [">= 0"])
       s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
       s.add_dependency(%q<libv8>, ["= 3.3.10.2"])
       s.add_dependency(%q<rails>, ["~> 3.1.1"])
@@ -141,6 +147,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<kaminari>, [">= 0"])
     s.add_dependency(%q<settingslogic>, [">= 0"])
     s.add_dependency(%q<simple_form>, [">= 0"])
+    s.add_dependency(%q<squeel>, [">= 0"])
     s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
     s.add_dependency(%q<libv8>, ["= 3.3.10.2"])
     s.add_dependency(%q<rails>, ["~> 3.1.1"])

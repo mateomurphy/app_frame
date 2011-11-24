@@ -9,6 +9,7 @@ gem 'inherited_resources'
 gem 'kaminari'
 gem 'settingslogic'
 gem 'simple_form'
+gem 'squeel'
 gem 'twitter-bootstrap-rails'
 gem 'libv8', '3.3.10.2'
 
