@@ -37,10 +37,7 @@ module AppFrame::ScopesHelper
   # create a link to a scope (or no scopes), wrapped in a list item
   def scope_link(name, scope = nil)
     
-    link = current_scopes.dup
-    boolean_scopes.each do |n, s|
-      link.delete(n)
-    end
+    link = current_filter_scopes.dup
     
     if scope
       link[scope] = true
@@ -49,9 +46,15 @@ module AppFrame::ScopesHelper
       active = current_boolean_scopes.empty?
     end
     
-    link = url_for(link)
+#    name = "#{name}: #{scope_count(scope)}"
     
     content_tag(:li, link_to(name, link), :class => active ? 'active' : nil)
+  end
+
+  def scope_count(scope)
+    chain = controller.end_of_association_chain
+    chain = chain.send(scope) if scope
+    chain.count
   end
 
   # craete a navigation for all the boolean scopes
