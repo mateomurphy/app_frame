@@ -6,18 +6,50 @@ module AppFrame::ScopesHelper
 
   # return only the boolean scopes
   def boolean_scopes
-    scopes.select { |n, s| s[:type] == :boolean  }
+    @boolean_scopes ||= scopes.inject({}) do |result, element|
+      result[element.first] = element.last if element.last[:type] == :boolean
+      result
+    end
+  end
+  
+  # return only the filter (non boolean) scopes
+  def filter_scopes
+    @filter_scopes ||= scopes.inject({}) do |result, element|
+      result[element.first] = element.last if element.last[:type] != :boolean
+      result
+    end
+  end
+  
+  def current_boolean_scopes
+    @current_boolean_scopes ||= current_scopes.inject({}) do |result, element|
+      result[element.first] = element.last if boolean_scopes.keys.include?(element.first)
+      result
+    end
+  end
+  
+  def current_filter_scopes
+    @current_filter_scopes ||= current_scopes.inject({}) do |result, element|
+      result[element.first] = element.last if filter_scopes.keys.include?(element.first)
+      result
+    end
   end
   
   # create a link to a scope (or no scopes), wrapped in a list item
   def scope_link(name, scope = nil)
-    if scope
-      link = url_for(scope => true)
-      active = current_scopes.keys.include?(scope)
-    else
-      link = url_for
-      active = current_scopes.empty?
+    
+    link = current_scopes.dup
+    boolean_scopes.each do |n, s|
+      link.delete(n)
     end
+    
+    if scope
+      link[scope] = true
+      active = current_boolean_scopes.keys.include?(scope)
+    else
+      active = current_boolean_scopes.empty?
+    end
+    
+    link = url_for(link)
     
     content_tag(:li, link_to(name, link), :class => active ? 'active' : nil)
   end
@@ -34,7 +66,4 @@ module AppFrame::ScopesHelper
     
     content_tag :ul, result.join("\n").html_safe, :class => 'pills'
   end
-  
-
-  
 end

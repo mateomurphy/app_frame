@@ -1,1 +1,12 @@
-%h2 Filters
+- if filter_scopes.any?
+  %h2 Filters
+  = form_tag url_for(), :method => :get, :class => 'form-stacked' do |f|
+    - filter_scopes.each do |name, scope|
+      .clear-fix
+        = label_tag name
+        = text_field_tag name, current_scopes[name]
+    - boolean_scopes.each do |name, scope|
+      = hidden_field_tag(name, 'true') if current_scopes[name]
+    .actions
+      = submit_tag "Filter", :class => 'btn'
+      = link_to("Clear filters", url_for(current_boolean_scopes), :class => 'btn')
