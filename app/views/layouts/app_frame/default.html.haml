@@ -16,13 +16,13 @@
     #main.container-fluid
       -if sidebar.present?
         .content
-          =render '/app_frame/layout/breadcrumb'
+          =render 'breadcrumb'
           =render '/app_frame/layout/flashes'
           =yield
         .sidebar
           = sidebar
       -else
-        =render '/app_frame/layout/breadcrumb'
+        =render 'breadcrumb'
         =render '/app_frame/layout/flashes'
         =yield
         
