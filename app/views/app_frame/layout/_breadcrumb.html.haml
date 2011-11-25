@@ -1,9 +1,12 @@
 = breadcrumb do |items|
+  - items << link_to(Settings.app_name, controller_namespaces + [:root])
   - if parent?
     -items << link_to(parent_resource_name.pluralize, parent_collection_url)
     -items << link_to(parent.to_s, parent_url)
-  - if params[:id]
+  - if resource?
     -items << link_to(resource_name.pluralize, collection_url)
     -items << resource.to_s
-  - else 
+  - elsif collection?
     -items << resource_name.pluralize
+  - else
+    -items << controller_name.humanize
