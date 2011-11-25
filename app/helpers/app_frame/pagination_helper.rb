@@ -5,6 +5,6 @@ module AppFrame::PaginationHelper
     range_end = (page)* per_page
     range_end = count if range_end > count
     
-    "Displaying <strong>#{range_start} - #{range_end}</strong> of <strong>#{count}</strong> in total".html_safe
+    "<div class='page-range'>Displaying <strong>#{range_start} - #{range_end}</strong> of <strong>#{count}</strong> in total</div>".html_safe
   end
 end
