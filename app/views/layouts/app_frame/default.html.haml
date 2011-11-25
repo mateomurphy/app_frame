@@ -1,3 +1,4 @@
+- sidebar = render 'sidebar'
 !!! 5
 %html
   %head
@@ -13,9 +14,15 @@
             =render "/#{controller_namespaces.join("/")}/layout/secondary_menu"
     
     #main.container-fluid
-      .content
+      -if sidebar.present?
+        .content
+          =render '/app_frame/layout/breadcrumb'
+          =render '/app_frame/layout/flashes'
+          =yield
+        .sidebar
+          = sidebar
+      -else
+        =render '/app_frame/layout/breadcrumb'
         =render '/app_frame/layout/flashes'
         =yield
-      .sidebar
-        =render 'sidebar'
         
