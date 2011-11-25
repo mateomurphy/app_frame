@@ -1,11 +1,23 @@
 module AppFrame::ResourcesHelper
   
+  def collection?
+    !!collection
+  rescue NameError
+    false
+  end
+  
+  def resource?
+    !!resource
+  rescue NameError, ActiveRecord::RecordNotFound
+    false
+  end
+  
   def resource_name
     resource_class.model_name.human
   end
 
   def parent?
-    controller.send(:parent?)
+    controller.respond_to?(:parent?) && controller.send(:parent?)
   end
 
   def parent_resource_class
