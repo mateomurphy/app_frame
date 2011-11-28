@@ -17,5 +17,13 @@ module AppFrame
       map[type.to_sym]
     end
     
+    def page_header(title, &block)
+      content = "".html_safe
+      content += content_tag(:div, capture(&block), :class => 'page-actions') if block_given?
+      content += content_tag(:h1, title)
+      
+      content_tag(:div, content, :class => 'page-header')
+    end
+    
   end
 end

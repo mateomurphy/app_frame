@@ -1,12 +1,8 @@
-.page-header
-  .page-actions
-    =link_to("New #{resource_name}", new_resource_url, :class => 'btn')
-  %h1 #{resource_name.pluralize}
-
+=page_header resource_name.pluralize do
+  =link_to("New #{resource_name}", new_resource_url, :class => 'btn')
 =page_range
 =scope_nav
 = table_for(controller_namespaces + [resource_class], collection) do |t|
   = render 'table', :t => t
-  
 = paginate collection, :theme => 'app_frame'
   
