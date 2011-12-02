@@ -9,9 +9,9 @@
         .container-fluid
           =link_to(Settings.app_name, controller_namespaces + [:root], :class => 'brand')
           %ul.nav
-            =render "/#{controller_namespaces.join("/")}/layout/top_menu"
+            =render File.join(controller_namespaces + ['layout', 'top_menu'])
           %ul.nav.secondary-nav
-            =render "/#{controller_namespaces.join("/")}/layout/secondary_menu"
+            =render File.join(controller_namespaces + ['layout', 'secondary_menu'])
     
     #main.container-fluid
       -if sidebar.present?
