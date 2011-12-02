@@ -3,7 +3,7 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
-gem 'ckeditor-rails'
+#gem 'ckeditor-rails'
 gem "haml", ">= 0"
 gem 'inherited_resources'
 gem 'kaminari'
