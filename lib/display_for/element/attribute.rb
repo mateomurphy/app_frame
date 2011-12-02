@@ -2,7 +2,7 @@ module DisplayFor
   module Element
     class Attribute < Base
       def label(resource_class)
-        resource_class.human_attribute_name(@name.to_s)
+        @options[:label] || resource_class.human_attribute_name(@name.to_s)
       end
     
       def content(resource)

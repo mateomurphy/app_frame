@@ -3,7 +3,7 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
-gem 'ckeditor-rails'
+#gem 'ckeditor-rails'
 gem "haml", ">= 0"
 gem 'inherited_resources'
 gem 'kaminari'
@@ -12,6 +12,7 @@ gem 'simple_form'
 gem 'squeel'
 gem 'twitter-bootstrap-rails'
 gem 'libv8', '3.3.10.2'
+gem 'nested_set'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
