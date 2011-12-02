@@ -3,24 +3,24 @@ module AppFrame
     def menu_link(key, path, options = {}, &block)
       active = false
       highlight = options.delete(:highlights_on) || /#{path}/
+      dropdown = options.delete(:dropdown)
 
       Array(highlight).each do |regex|
         active = true if request.path =~ regex
       end
     
-      if active
-        if options[:class]
-          options[:class] << ' active'
-        else
-          options[:class] = 'active'
-        end
-      end
+      options[:class] ||= ""
+      options[:class] << ' active' if active
+      options[:class] << ' dropdown' if dropdown
+      options[:class] = options[:class].present? ? options[:class].strip : nil
     
       key = t(:"menu.#{key}") if key.is_a?(Symbol)
     
-      content = link_to(key, path)
+      a_class = dropdown ? 'dropdown-toggle' : nil
+      ul_class = dropdown ? 'dropdown-menu' : nil
     
-      content += content_tag(:ul, capture(&block)) if block_given?
+      content = link_to(key, path, :class => a_class)
+      content += content_tag(:ul, capture(&block), :class => ul_class) if block_given?
     
       content_tag :li, content, options
     end  
