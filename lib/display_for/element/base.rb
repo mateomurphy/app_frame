@@ -6,7 +6,7 @@ module DisplayFor
       end
     
       def label
-        @name.to_s.humanize
+        @options[:label] || @name.to_s.humanize
       end
     
       def content(resource)
