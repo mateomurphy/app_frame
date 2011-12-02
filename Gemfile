@@ -12,6 +12,7 @@ gem 'simple_form'
 gem 'squeel'
 gem 'twitter-bootstrap-rails'
 gem 'libv8', '3.3.10.2'
+gem 'nested_set'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.

@@ -61,6 +61,9 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.3)
+    nested_set (1.6.8)
+      activerecord (>= 3.0.0)
+      railties (>= 3.0.0)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.2)
@@ -138,6 +141,7 @@ DEPENDENCIES
   kaminari
   libv8 (= 3.3.10.2)
   log_buddy
+  nested_set
   rails (~> 3.1.1)
   rcov
   rspec
