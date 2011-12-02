@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-11-24}
+  s.date = %q{2011-12-02}
   s.description = %q{An app framework}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
@@ -26,12 +26,17 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "app/assets/javascripts/app_frame/application.js",
+    "app/assets/stylesheets/app_frame/_tree.scss",
     "app/assets/stylesheets/app_frame/application.scss",
     "app/helpers/app_frame/bootstrap_helper.rb",
+    "app/helpers/app_frame/breadcrumb_helper.rb",
     "app/helpers/app_frame/menu_helper.rb",
     "app/helpers/app_frame/pagination_helper.rb",
+    "app/helpers/app_frame/resources_helper.rb",
     "app/helpers/app_frame/scopes_helper.rb",
+    "app/helpers/app_frame/tree_nav_helper.rb",
     "app/models/settings.rb",
+    "app/views/app_frame/actions/_breadcrumb.html.haml",
     "app/views/app_frame/actions/_form.html.haml",
     "app/views/app_frame/actions/_show.html.haml",
     "app/views/app_frame/actions/_sidebar.html.haml",
@@ -97,7 +102,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/mateomurphy/app_frame}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.3}
+  s.rubygems_version = %q{1.5.2}
   s.summary = %q{An app framework}
   s.test_files = [
     "spec/app_frame_spec.rb",
@@ -108,7 +113,6 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<ckeditor-rails>, [">= 0"])
       s.add_runtime_dependency(%q<haml>, [">= 0"])
       s.add_runtime_dependency(%q<inherited_resources>, [">= 0"])
       s.add_runtime_dependency(%q<kaminari>, [">= 0"])
@@ -117,6 +121,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<squeel>, [">= 0"])
       s.add_runtime_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
       s.add_runtime_dependency(%q<libv8>, ["= 3.3.10.2"])
+      s.add_runtime_dependency(%q<nested_set>, [">= 0"])
       s.add_development_dependency(%q<rails>, ["~> 3.1.1"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -124,7 +129,6 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<log_buddy>, [">= 0"])
     else
-      s.add_dependency(%q<ckeditor-rails>, [">= 0"])
       s.add_dependency(%q<haml>, [">= 0"])
       s.add_dependency(%q<inherited_resources>, [">= 0"])
       s.add_dependency(%q<kaminari>, [">= 0"])
@@ -133,6 +137,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<squeel>, [">= 0"])
       s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
       s.add_dependency(%q<libv8>, ["= 3.3.10.2"])
+      s.add_dependency(%q<nested_set>, [">= 0"])
       s.add_dependency(%q<rails>, ["~> 3.1.1"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -141,7 +146,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<log_buddy>, [">= 0"])
     end
   else
-    s.add_dependency(%q<ckeditor-rails>, [">= 0"])
     s.add_dependency(%q<haml>, [">= 0"])
     s.add_dependency(%q<inherited_resources>, [">= 0"])
     s.add_dependency(%q<kaminari>, [">= 0"])
@@ -150,6 +154,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<squeel>, [">= 0"])
     s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
     s.add_dependency(%q<libv8>, ["= 3.3.10.2"])
+    s.add_dependency(%q<nested_set>, [">= 0"])
     s.add_dependency(%q<rails>, ["~> 3.1.1"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
