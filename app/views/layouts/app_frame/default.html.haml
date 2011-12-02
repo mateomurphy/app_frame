@@ -4,7 +4,7 @@
   %head
     =render '/app_frame/layout/head'
   %body
-    .topbar
+    .topbar{:'data-dropdown'=>"dropdown"}
       .fill
         .container-fluid
           =link_to(Settings.app_name, controller_namespaces + [:root], :class => 'brand')
