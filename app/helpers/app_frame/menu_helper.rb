@@ -1,6 +1,6 @@
 module AppFrame
   module MenuHelper
-    def menu_link(key, path, options = {}, &block)
+    def menu_link(key, path = '#', options = {}, &block)
       active = false
       highlight = options.delete(:highlights_on) || /#{path}/
       dropdown = options.delete(:dropdown)
