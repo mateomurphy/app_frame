@@ -17,12 +17,14 @@
       -if sidebar.present?
         .content
           =render 'breadcrumb'
+          =render 'sub_menu'
           =render '/app_frame/layout/flashes'
           =yield
         .sidebar
           = sidebar
       -else
         =render 'breadcrumb'
+        =render 'sub_menu'      
         =render '/app_frame/layout/flashes'
         =yield
         
