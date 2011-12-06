@@ -5,7 +5,7 @@
     -items << link_to(parent.to_s, parent_url)
   - if resource?
     -items << link_to(resource_name.pluralize, collection_url)
-    -items << resource.to_s
+    -items << (resource.new_record? ? "New" : resource.to_s)
   - elsif collection?
     -items << resource_name.pluralize
   - else
