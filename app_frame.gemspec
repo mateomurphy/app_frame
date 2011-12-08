@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-12-02}
+  s.date = %q{2011-12-08}
   s.description = %q{An app framework}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
@@ -40,6 +40,7 @@ Gem::Specification.new do |s|
     "app/views/app_frame/actions/_form.html.haml",
     "app/views/app_frame/actions/_show.html.haml",
     "app/views/app_frame/actions/_sidebar.html.haml",
+    "app/views/app_frame/actions/_sub_menu.html.haml",
     "app/views/app_frame/actions/_table.html.haml",
     "app/views/app_frame/actions/edit.html.haml",
     "app/views/app_frame/actions/index.html.haml",
@@ -102,7 +103,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/mateomurphy/app_frame}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
+  s.rubygems_version = %q{1.5.3}
   s.summary = %q{An app framework}
   s.test_files = [
     "spec/app_frame_spec.rb",
