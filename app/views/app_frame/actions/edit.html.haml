@@ -1,5 +1,5 @@
 = page_header resource.to_s do
-  = object_locale_switch(resource)
+  = content_locale_switch(resource)
 = simple_form_for resource_path_array do |f|
   = hidden_field_tag :content_locale, params[:content_locale] if params[:content_locale]
   = render 'form', :f => f
