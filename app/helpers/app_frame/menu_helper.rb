@@ -23,6 +23,21 @@ module AppFrame
       content += content_tag(:ul, capture(&block), :class => ul_class) if block_given?
     
       content_tag :li, content, options
-    end  
+    end 
+  
+    def content_locale_switch(obj = nil)
+      return unless obj.respond_to?(:translated_locales)
+      
+      current_locale = (params[:content_locale] || I18n.default_locale).to_sym
+      
+      locales = I18n.available_locales.map do |s|
+        text = s.to_s.upcase
+        text << "*" if obj && !obj.translated_locales.include?(s)
+        content_tag :li, link_to(text, url_for(:content_locale => s)), :class => current_locale == s ? 'active' : nil
+      end
+      
+      content_tag :ul, locales.join("").html_safe, :class => 'pills'
+    end
+    
   end
 end
