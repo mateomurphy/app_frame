@@ -1,5 +1,6 @@
 =page_header "New #{resource_name}"
 = simple_form_for resource_path_array do |f|
+  = hidden_field_tag :content_locale, params[:content_locale] if params[:content_locale] 
   = render 'form', :f => f
   .actions
     = f.button :submit, :class => 'btn primary'
