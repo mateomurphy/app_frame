@@ -1,6 +1,6 @@
 %title= Settings.app_name
 %meta{:charset=>"UTF-8"}
 = csrf_meta_tag
-= stylesheet_link_tag File.join(controller_namespaces, 'application')
-= javascript_include_tag File.join(controller_namespaces, 'application')
+= stylesheet_link_tag namespaced('application')
+= javascript_include_tag namespaced('application')
 = yield :head

@@ -1,6 +1,8 @@
 module AppFrame::PaginationHelper
   
   def page_range
+    return nil if count == 0
+    
     range_start = (page - 1) * per_page + 1
     range_end = (page)* per_page
     range_end = count if range_end > count
