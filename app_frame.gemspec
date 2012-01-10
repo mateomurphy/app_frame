@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{app_frame}
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-12-31}
+  s.date = %q{2012-01-09}
   s.description = %q{An app framework}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
@@ -89,6 +89,8 @@ Gem::Specification.new do |s|
     "lib/assets/images/web-app-theme/icons/cross.png",
     "lib/assets/images/web-app-theme/icons/key.png",
     "lib/assets/images/web-app-theme/icons/tick.png",
+    "lib/assets/javascripts/anytime.js",
+    "lib/assets/stylesheets/anytime.css",
     "lib/assets/stylesheets/web-app-theme/base.css",
     "lib/assets/stylesheets/web-app-theme/override.css",
     "lib/assets/stylesheets/web-app-theme/themes/default/images/arrow.png",
@@ -116,7 +118,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/mateomurphy/app_frame}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
+  s.rubygems_version = %q{1.5.3}
   s.summary = %q{An app framework}
   s.test_files = [
     "spec/app_frame_spec.rb",
