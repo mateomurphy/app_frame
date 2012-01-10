@@ -1,0 +1,9 @@
+=page_header "Resend unlock instructions"
+
+= simple_form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| 
+  = f.error_notification 
+
+  = f.input :email, :required => true 
+
+  .actions
+    = f.button :submit, "Resend unlock instructions"

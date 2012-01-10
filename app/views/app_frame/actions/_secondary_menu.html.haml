@@ -1,0 +1,2 @@
+=menu_link(current_user.email, edit_user_registration_path) if Devise.mappings[:user].registerable?
+%li= link_to("Sign out", destroy_user_session_path, :method => :delete)

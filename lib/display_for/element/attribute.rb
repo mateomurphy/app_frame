@@ -10,8 +10,18 @@ module DisplayFor
       end
     
       def value(resource)
-        result = resource.send(@name)
-        result = template.l(result, :format => @options[:format]) if @options[:format] && [Date, DateTime, Time].include?(result.class)
+        raise "#{resource.class} does not respond to #{@name}" unless resource.respond_to?(@name)
+        
+        result = resource.send(@name) 
+        
+        if @options[:type]
+          result = template.send(:"number_to_#{@options[:type]}", result)
+        end
+        
+        if [Date, DateTime, Time].include?(result.class) &&  @options[:format]
+          result = template.l(result, :format => @options[:format])
+        end
+        
         result = link_to(result, resource) if @options[:link_to]
         result
       end

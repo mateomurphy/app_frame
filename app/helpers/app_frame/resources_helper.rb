@@ -34,6 +34,14 @@ module AppFrame::ResourcesHelper
     result.map(&:underscore)
   end
   
+  def namespaced(string)
+    if controller_namespaces.any?
+      File.join(controller_namespaces, string)
+    else
+      string
+    end
+  end
+  
   def resource_path_array
     result = controller_namespaces
     result << parent if parent?

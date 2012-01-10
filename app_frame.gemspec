@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{app_frame}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-12-19}
+  s.date = %q{2011-12-31}
   s.description = %q{An app framework}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
@@ -28,6 +28,10 @@ Gem::Specification.new do |s|
     "app/assets/javascripts/app_frame/application.js",
     "app/assets/stylesheets/app_frame/_tree.scss",
     "app/assets/stylesheets/app_frame/application.scss",
+    "app/controllers/app_frame/devise/confirmations_controller.rb",
+    "app/controllers/app_frame/devise/passwords_controller.rb",
+    "app/controllers/app_frame/devise/registrations_controller.rb",
+    "app/controllers/app_frame/devise/sessions_controller.rb",
     "app/helpers/app_frame/bootstrap_helper.rb",
     "app/helpers/app_frame/breadcrumb_helper.rb",
     "app/helpers/app_frame/menu_helper.rb",
@@ -38,6 +42,7 @@ Gem::Specification.new do |s|
     "app/models/settings.rb",
     "app/views/app_frame/actions/_breadcrumb.html.haml",
     "app/views/app_frame/actions/_form.html.haml",
+    "app/views/app_frame/actions/_secondary_menu.html.haml",
     "app/views/app_frame/actions/_show.html.haml",
     "app/views/app_frame/actions/_sidebar.html.haml",
     "app/views/app_frame/actions/_sub_menu.html.haml",
@@ -46,9 +51,16 @@ Gem::Specification.new do |s|
     "app/views/app_frame/actions/index.html.haml",
     "app/views/app_frame/actions/new.html.haml",
     "app/views/app_frame/actions/show.html.haml",
+    "app/views/app_frame/devise/confirmations/new.html.haml",
+    "app/views/app_frame/devise/passwords/edit.html.haml",
+    "app/views/app_frame/devise/passwords/new.html.haml",
+    "app/views/app_frame/devise/registrations/edit.html.haml",
+    "app/views/app_frame/devise/registrations/new.html.haml",
+    "app/views/app_frame/devise/sessions/new.html.haml",
+    "app/views/app_frame/devise/shared/_links.html.haml",
+    "app/views/app_frame/devise/unlocks/new.html.haml",
     "app/views/app_frame/layout/_flashes.html.haml",
     "app/views/app_frame/layout/_head.html.haml",
-    "app/views/app_frame/layout/_secondary_menu.html.haml",
     "app/views/app_frame/layout/_top_menu.html.haml",
     "app/views/kaminari/app_frame/_first_page.html.haml",
     "app/views/kaminari/app_frame/_gap.html.haml",
@@ -58,6 +70,7 @@ Gem::Specification.new do |s|
     "app/views/kaminari/app_frame/_paginator.html.haml",
     "app/views/kaminari/app_frame/_prev_page.html.haml",
     "app/views/layouts/app_frame/default.html.haml",
+    "app/views/layouts/app_frame/devise.html.haml",
     "app/views/layouts/web_app_theme/default.html.haml",
     "app/views/web_app_theme/actions/_form.html.haml",
     "app/views/web_app_theme/actions/_list.html.haml",
@@ -103,7 +116,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/mateomurphy/app_frame}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.3}
+  s.rubygems_version = %q{1.5.2}
   s.summary = %q{An app framework}
   s.test_files = [
     "spec/app_frame_spec.rb",

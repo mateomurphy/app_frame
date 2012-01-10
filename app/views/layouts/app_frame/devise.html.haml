@@ -1,0 +1,18 @@
+!!! 5
+%html
+  %head
+    %title= Settings.app_name
+    %meta{:charset=>"UTF-8"}
+    = csrf_meta_tag
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = yield :head
+  %body
+    .topbar
+      .fill
+        .container-fluid
+          = link_to(Settings.app_name, root_path, :class => 'brand')
+    #main.container-fluid
+      = render '/app_frame/layout/flashes'
+      = yield
+      = render :partial => "app_frame/devise/shared/links"        
