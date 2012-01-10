@@ -5,8 +5,9 @@ module AppFrame::TreeNavHelper
     result << tree_nav_link("&darr;", right_admin_section_page_path(parent, node), node.right_sibling)
     result << tree_nav_link("&rarr;", down_admin_section_page_path(parent, node),  node.left_sibling)
     result << tree_nav_link("&larr;", up_admin_section_page_path(parent, node),    node.parent)
-    result << tree_nav_link("Edit",   edit_admin_section_page_path(parent, node))
+    result << link_to("Edit",   edit_admin_section_page_path(parent, node))
     yield result if block_given?
+    result << link_to("Delete", admin_section_page_path(parent, node), :method => :delete)
     content_tag :span, result.join('').html_safe, :class => 'tree_nav'
   end
   
