@@ -1,6 +1,7 @@
 /*
  *= require twitter/bootstrap
-*/
+ *= require anytime
+ */
 
 @import 'tree';
 
@@ -41,4 +42,8 @@ select {
 .page-range {
   margin-top: 12px;
   float: right;
+}
+
+input, textarea, select, .cke_skin_kama {
+  width: 700px;
 }
