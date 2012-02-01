@@ -11,7 +11,7 @@ gem 'kaminari'
 gem 'settingslogic'
 gem 'simple_form'
 gem 'squeel'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', '~> 1.4.3'
 gem 'libv8', '3.3.10.2'
 gem 'nested_set'
 
