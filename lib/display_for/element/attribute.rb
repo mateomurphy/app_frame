@@ -15,7 +15,11 @@ module DisplayFor
         result = resource.send(@name) 
         
         if @options[:type]
-          result = template.send(:"number_to_#{@options[:type]}", result)
+          if @options[:type] == :html
+            result = result.html_safe
+          else
+            result = template.send(:"number_to_#{@options[:type]}", result)
+          end
         end
         
         if [Date, DateTime, Time].include?(result.class) &&  @options[:format]
