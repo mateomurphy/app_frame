@@ -1,7 +1,4 @@
-/*
- *= require twitter/bootstrap
-*/
-
+@import 'bootstrap';
 @import 'tree';
 
 .container-fluid > .sidebar {
@@ -17,7 +14,7 @@
   margin-right: 280px;
 }
 
-#main {
+#main, .sidebar {
     margin-top:50px;
 }
 

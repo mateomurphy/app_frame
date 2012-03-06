@@ -9,7 +9,7 @@ require 'nested_set'
 require 'simple_form'
 require 'display_for'
 require 'settingslogic'
-require 'twitter-bootstrap-rails'
+require 'bootstrap-sass'
 
 module AppFrame
   autoload :ControllerMethods,  'app_frame/controller_methods'

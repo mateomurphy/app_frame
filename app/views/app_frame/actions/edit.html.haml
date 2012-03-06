@@ -1,8 +1,8 @@
 = page_header resource.to_s do
   = content_locale_switch(resource)
-= simple_form_for resource_path_array do |f|
+= simple_form_for resource_path_array, :html => {:class => 'form-inline' } do |f|
   = hidden_field_tag :content_locale, params[:content_locale] if params[:content_locale]
   = render 'form', :f => f
-  .actions
-    = f.button :submit, :class => 'btn primary'
+  .form-actions
+    = f.button :submit, :class => 'btn btn-primary'
     = link_to "Cancel", collection_path, :class => 'btn'

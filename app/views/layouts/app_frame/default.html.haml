@@ -4,13 +4,13 @@
   %head
     =render '/app_frame/layout/head'
   %body
-    .topbar{:'data-dropdown'=>"dropdown"}
-      .fill
+    .navbar.navbar-fixed-top{:'data-dropdown'=>"dropdown"}
+      .navbar-inner
         .container-fluid
           =link_to(Settings.app_name, controller_namespaces + [:root], :class => 'brand')
           %ul.nav
             =render File.join(controller_namespaces + ['layout', 'top_menu'])
-          %ul.nav.secondary-nav
+          %ul.nav.pull-right
             =render File.join(controller_namespaces + ['layout', 'secondary_menu'])
     
     #main.container-fluid

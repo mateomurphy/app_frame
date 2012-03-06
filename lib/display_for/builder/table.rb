@@ -42,7 +42,7 @@ module DisplayFor
 
         result = build_header + content_tag(:tbody, result)
 
-        content_tag(:table, result, :class => 'bordered-table zebra-striped').html_safe
+        content_tag(:table, result, :class => 'table table-bordered table-striped').html_safe
       end
     end
   end

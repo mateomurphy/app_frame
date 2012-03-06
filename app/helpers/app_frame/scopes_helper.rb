@@ -67,6 +67,6 @@ module AppFrame::ScopesHelper
       result << scope_link(name.to_s.humanize, s[:as])
     end
     
-    content_tag :ul, result.join("\n").html_safe, :class => 'pills'
+    content_tag :ul, result.join("\n").html_safe, :class => 'nav nav-pills'
   end
 end

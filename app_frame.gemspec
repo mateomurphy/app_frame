@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{app_frame}
-  s.version = "0.1.2"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = %q{2011-12-31}
+  s.date = %q{2012-03-06}
   s.description = %q{An app framework}
   s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
@@ -133,10 +133,9 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
       s.add_runtime_dependency(%q<simple_form>, [">= 0"])
       s.add_runtime_dependency(%q<squeel>, [">= 0"])
-      s.add_runtime_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
-      s.add_runtime_dependency(%q<libv8>, ["= 3.3.10.2"])
+      s.add_runtime_dependency(%q<bootstrap-sass>, ["~> 2.0.1"])
       s.add_runtime_dependency(%q<nested_set>, [">= 0"])
-      s.add_development_dependency(%q<rails>, ["~> 3.1.1"])
+      s.add_development_dependency(%q<rails>, ["~> 3.2.2"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
@@ -149,10 +148,9 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<settingslogic>, [">= 0"])
       s.add_dependency(%q<simple_form>, [">= 0"])
       s.add_dependency(%q<squeel>, [">= 0"])
-      s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
-      s.add_dependency(%q<libv8>, ["= 3.3.10.2"])
+      s.add_dependency(%q<bootstrap-sass>, ["~> 2.0.1"])
       s.add_dependency(%q<nested_set>, [">= 0"])
-      s.add_dependency(%q<rails>, ["~> 3.1.1"])
+      s.add_dependency(%q<rails>, ["~> 3.2.2"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
@@ -166,10 +164,9 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<settingslogic>, [">= 0"])
     s.add_dependency(%q<simple_form>, [">= 0"])
     s.add_dependency(%q<squeel>, [">= 0"])
-    s.add_dependency(%q<twitter-bootstrap-rails>, [">= 0"])
-    s.add_dependency(%q<libv8>, ["= 3.3.10.2"])
+    s.add_dependency(%q<bootstrap-sass>, ["~> 2.0.1"])
     s.add_dependency(%q<nested_set>, [">= 0"])
-    s.add_dependency(%q<rails>, ["~> 3.1.1"])
+    s.add_dependency(%q<rails>, ["~> 3.2.2"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
