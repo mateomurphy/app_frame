@@ -36,7 +36,7 @@ module AppFrame
         content_tag :li, link_to(text, url_for(:content_locale => s)), :class => current_locale == s ? 'active' : nil
       end
       
-      content_tag :ul, locales.join("").html_safe, :class => 'pills'
+      content_tag :ul, locales.join("").html_safe, :class => 'nav nav-pills'
     end
     
   end

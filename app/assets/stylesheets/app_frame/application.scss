@@ -44,6 +44,8 @@ select {
   float: right;
 }
 
-input, textarea, select, .cke_skin_kama {
-  width: 700px;
+.content {
+    input[type=text], textarea, select, .cke_skin_kama {
+        width: 700px;
+    }
 }
