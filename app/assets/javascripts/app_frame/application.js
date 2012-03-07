@@ -1,4 +1,7 @@
+/*
+ * app_frame/application.js
+ */
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
 //= require anytime
+//= require bootstrap
