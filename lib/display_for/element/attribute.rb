@@ -27,7 +27,7 @@ module DisplayFor
         end
         
         result = link_to(result, resource) if @options[:link_to]
-        result
+        result.to_s
       end
     
       def template
