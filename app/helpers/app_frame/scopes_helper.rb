@@ -4,6 +4,13 @@ module AppFrame::ScopesHelper
     controller.class.scopes_configuration || {}
   end
 
+  def default_scopes
+    @default_scopes ||= scopes.inject({}) do |result, element|
+      result[element.first] = element.last if element.last[:default] == true
+      result
+    end
+  end
+
   # return only the boolean scopes
   def boolean_scopes
     @boolean_scopes ||= scopes.inject({}) do |result, element|
@@ -35,13 +42,24 @@ module AppFrame::ScopesHelper
   end
   
   # create a link to a scope (or no scopes), wrapped in a list item
-  def scope_link(name, scope = nil)
+  def scope_link(scope = nil)
+    if scope
+      as = scope[:as]
+      name = as.to_s.humanize
+    else
+      as = nil
+      name = "All"
+    end
     
     link = current_filter_scopes.dup
     
-    if scope
-      link[scope] = true
-      active = current_boolean_scopes.keys.include?(scope)
+    if as
+      unless scope[:default]
+        link[as] = true 
+        default_scopes.each { |dn, ds| link[ds[:as]] = false }
+      end
+
+      active = current_boolean_scopes.keys.include?(as)
     else
       active = current_boolean_scopes.empty?
     end
@@ -61,10 +79,14 @@ module AppFrame::ScopesHelper
   def scope_nav
     return unless boolean_scopes.count > 0
     
-    result = [scope_link("All")]
+    if default_scopes.any?
+      result = []
+    else
+      result = [scope_link]
+    end
     
     boolean_scopes.each do |name, s|
-      result << scope_link(name.to_s.humanize, s[:as])
+      result << scope_link(s)
     end
     
     content_tag :ul, result.join("\n").html_safe, :class => 'nav nav-pills'
