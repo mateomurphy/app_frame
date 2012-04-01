@@ -2,7 +2,7 @@ module AppFrame
   module BootstrapHelper
     def alert(message, type = nil)
       message = close_button + content_tag(:p, message)
-      content_tag(:div, message, :class => "alert-message #{alert_type_map(type)} fade in", :'data-alert' => "alert")
+      content_tag(:div, message, :class => "alert alert-#{alert_type_map(type)} fade in", :'data-alert' => "alert")
     end
     
     def close_button
@@ -14,7 +14,7 @@ module AppFrame
         :notice => 'success'
       }
       
-      map[type.to_sym]
+      map[type.to_sym] || type
     end
     
     def page_header(title, &block)
