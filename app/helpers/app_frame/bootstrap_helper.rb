@@ -11,7 +11,7 @@ module AppFrame
     
     def alert_type_map(type)
       map = {
-        :alert => 'error'
+        :alert => 'error',
         :notice => 'success'
       }
       
