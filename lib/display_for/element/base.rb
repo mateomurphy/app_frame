@@ -26,12 +26,14 @@ module DisplayFor
           @builder.namespace + [resource]
         end
       
+        return nil unless url
+      
         html_options[:method]  ||= @options[:method]
         html_options[:confirm] ||= @options[:confirm]
         html_options[:remote]  ||= @options[:remote]
         html_options[:class]   ||= @options[:class]
       
-        @builder.template.link_to(string,  url, html_options)
+        @builder.template.link_to(string, url, html_options)
       end
     end
   end
