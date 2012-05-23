@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "app_frame"
-  s.version = "0.4.5"
+  s.version = "0.4.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
@@ -103,6 +103,7 @@ Gem::Specification.new do |s|
     "lib/display_for/builder.rb",
     "lib/display_for/builder/base.rb",
     "lib/display_for/builder/collection_base.rb",
+    "lib/display_for/builder/csv.rb",
     "lib/display_for/builder/resource_base.rb",
     "lib/display_for/builder/table.rb",
     "lib/display_for/builder/view.rb",
