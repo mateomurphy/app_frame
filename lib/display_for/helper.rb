@@ -8,6 +8,9 @@ module DisplayFor
       Builder::View.new(resource, self, &block).to_s
     end
     
+    def csv_for(resource_class, collection, html_options={}, &block)
+      Builder::Csv.new(resource_class, collection, self, &block).to_s
+    end    
   end
 end
 
