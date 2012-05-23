@@ -20,7 +20,7 @@ module DisplayFor
         end
         result << content_tag(:td, build_actions(resource), :class => 'last') if @actions.any?
 
-        content_tag(:tr, result.html_safe) << "\n"
+        content_tag(:tr, result.html_safe, :id => "#{@resource_class}_#{resource.id}".underscore) << "\n"
       end
     
       def build_actions(resource)
