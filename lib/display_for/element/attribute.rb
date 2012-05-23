@@ -6,7 +6,11 @@ module DisplayFor
       end
     
       def content(resource)
-        super || value(resource)
+        if @block
+          @block.call(resource)
+        else
+          value(resource)
+        end
       end
     
       def value(resource)
