@@ -1,16 +1,16 @@
 source "http://rubygems.org"
 
-#gem 'ckeditor-rails'
-gem 'haml'
+gem 'bootstrap-sass', '~> 2.0.1'
 gem 'devise'
+gem 'haml-rails'
 gem 'inherited_resources'
 gem 'kaminari'
-gem 'settingslogic'
 gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
+gem 'nested_set'
+gem 'sass-rails'
+gem 'settingslogic'
 gem 'simple_form'
 gem 'squeel'
-gem 'bootstrap-sass', '~> 2.0.1'
-gem 'nested_set'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.

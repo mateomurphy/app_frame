@@ -10,6 +10,7 @@ require 'nested_set'
 require 'simple_form'
 require 'display_for'
 require 'settingslogic'
+require 'sass'
 require 'bootstrap-sass'
 
 module AppFrame
