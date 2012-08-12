@@ -1,9 +1,0 @@
-%h2.title
-  = t("web-app-theme.all", :default => "All")
-  = resource_name.pluralize
-.inner
-  =render 'list'
-  .actions-bar.wat-cf
-    .actions
-    = will_paginate collection
-- content_for :sidebar, render(:partial => 'sidebar')
