@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "app_frame"
-  s.version = "0.4.7"
+  s.version = "0.4.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2012-08-11"
+  s.date = "2012-08-27"
   s.description = "An app framework"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
@@ -71,34 +71,13 @@ Gem::Specification.new do |s|
     "app/views/kaminari/app_frame/_prev_page.html.haml",
     "app/views/layouts/app_frame/default.html.haml",
     "app/views/layouts/app_frame/devise.html.haml",
-    "app/views/layouts/web_app_theme/default.html.haml",
-    "app/views/web_app_theme/actions/_form.html.haml",
-    "app/views/web_app_theme/actions/_list.html.haml",
-    "app/views/web_app_theme/actions/_show.html.haml",
-    "app/views/web_app_theme/actions/_sidebar.html.haml",
-    "app/views/web_app_theme/actions/edit.html.haml",
-    "app/views/web_app_theme/actions/index.html.haml",
-    "app/views/web_app_theme/actions/new.html.haml",
-    "app/views/web_app_theme/actions/show.html.haml",
     "app_frame.gemspec",
     "lib/app_frame.rb",
     "lib/app_frame/controller_methods.rb",
     "lib/app_frame/view_methods.rb",
-    "lib/assets/images/web-app-theme/avatar.png",
-    "lib/assets/images/web-app-theme/icons/application_edit.png",
-    "lib/assets/images/web-app-theme/icons/cross.png",
-    "lib/assets/images/web-app-theme/icons/key.png",
-    "lib/assets/images/web-app-theme/icons/tick.png",
+    "lib/assets/images/.gitkeep",
     "lib/assets/javascripts/anytime.js",
     "lib/assets/stylesheets/anytime.css",
-    "lib/assets/stylesheets/web-app-theme/base.css",
-    "lib/assets/stylesheets/web-app-theme/override.css",
-    "lib/assets/stylesheets/web-app-theme/themes/default/images/arrow.png",
-    "lib/assets/stylesheets/web-app-theme/themes/default/images/boxbar-background.png",
-    "lib/assets/stylesheets/web-app-theme/themes/default/images/button-background-active.png",
-    "lib/assets/stylesheets/web-app-theme/themes/default/images/button-background.png",
-    "lib/assets/stylesheets/web-app-theme/themes/default/images/menubar-background.png",
-    "lib/assets/stylesheets/web-app-theme/themes/default/style.css",
     "lib/display_for.rb",
     "lib/display_for/builder.rb",
     "lib/display_for/builder/base.rb",
@@ -126,16 +105,17 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<haml>, [">= 0"])
+      s.add_runtime_dependency(%q<bootstrap-sass>, ["~> 2.0.1"])
       s.add_runtime_dependency(%q<devise>, [">= 0"])
+      s.add_runtime_dependency(%q<haml-rails>, [">= 0"])
       s.add_runtime_dependency(%q<inherited_resources>, [">= 0"])
       s.add_runtime_dependency(%q<kaminari>, [">= 0"])
-      s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
       s.add_runtime_dependency(%q<nested_form>, [">= 0"])
+      s.add_runtime_dependency(%q<nested_set>, [">= 0"])
+      s.add_runtime_dependency(%q<sass-rails>, [">= 0"])
+      s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
       s.add_runtime_dependency(%q<simple_form>, [">= 0"])
       s.add_runtime_dependency(%q<squeel>, [">= 0"])
-      s.add_runtime_dependency(%q<bootstrap-sass>, ["~> 2.0.1"])
-      s.add_runtime_dependency(%q<nested_set>, [">= 0"])
       s.add_development_dependency(%q<rails>, ["~> 3.2.2"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<bundler>, [">= 0"])
@@ -143,16 +123,17 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<simplecov>, [">= 0"])
       s.add_development_dependency(%q<log_buddy>, [">= 0"])
     else
-      s.add_dependency(%q<haml>, [">= 0"])
+      s.add_dependency(%q<bootstrap-sass>, ["~> 2.0.1"])
       s.add_dependency(%q<devise>, [">= 0"])
+      s.add_dependency(%q<haml-rails>, [">= 0"])
       s.add_dependency(%q<inherited_resources>, [">= 0"])
       s.add_dependency(%q<kaminari>, [">= 0"])
-      s.add_dependency(%q<settingslogic>, [">= 0"])
       s.add_dependency(%q<nested_form>, [">= 0"])
+      s.add_dependency(%q<nested_set>, [">= 0"])
+      s.add_dependency(%q<sass-rails>, [">= 0"])
+      s.add_dependency(%q<settingslogic>, [">= 0"])
       s.add_dependency(%q<simple_form>, [">= 0"])
       s.add_dependency(%q<squeel>, [">= 0"])
-      s.add_dependency(%q<bootstrap-sass>, ["~> 2.0.1"])
-      s.add_dependency(%q<nested_set>, [">= 0"])
       s.add_dependency(%q<rails>, ["~> 3.2.2"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<bundler>, [">= 0"])
@@ -161,16 +142,17 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<log_buddy>, [">= 0"])
     end
   else
-    s.add_dependency(%q<haml>, [">= 0"])
+    s.add_dependency(%q<bootstrap-sass>, ["~> 2.0.1"])
     s.add_dependency(%q<devise>, [">= 0"])
+    s.add_dependency(%q<haml-rails>, [">= 0"])
     s.add_dependency(%q<inherited_resources>, [">= 0"])
     s.add_dependency(%q<kaminari>, [">= 0"])
-    s.add_dependency(%q<settingslogic>, [">= 0"])
     s.add_dependency(%q<nested_form>, [">= 0"])
+    s.add_dependency(%q<nested_set>, [">= 0"])
+    s.add_dependency(%q<sass-rails>, [">= 0"])
+    s.add_dependency(%q<settingslogic>, [">= 0"])
     s.add_dependency(%q<simple_form>, [">= 0"])
     s.add_dependency(%q<squeel>, [">= 0"])
-    s.add_dependency(%q<bootstrap-sass>, ["~> 2.0.1"])
-    s.add_dependency(%q<nested_set>, [">= 0"])
     s.add_dependency(%q<rails>, ["~> 3.2.2"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<bundler>, [">= 0"])
