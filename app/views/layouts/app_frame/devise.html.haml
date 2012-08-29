@@ -8,8 +8,8 @@
     = javascript_include_tag 'application'
     = yield :head
   %body
-    .topbar
-      .fill
+    .navbar.navbar-inverse.navbar-fixed-top{:'data-dropdown'=>"dropdown"}
+      .navbar-inner
         .container-fluid
           = link_to(Settings.app_name, root_path, :class => 'brand')
     #main.container-fluid
