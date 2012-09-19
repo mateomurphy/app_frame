@@ -4,7 +4,7 @@
   %head
     =render '/app_frame/layout/head'
   %body
-    .navbar.navbar-fixed-top{:'data-dropdown'=>"dropdown"}
+    .navbar.navbar-inverse.navbar-fixed-top{:'data-dropdown'=>"dropdown"}
       .navbar-inner
         .container-fluid
           =link_to(Settings.app_name, controller_namespaces + [:root], :class => 'brand')

@@ -1,10 +1,4 @@
 GIT
-  remote: git://github.com/mateomurphy/display_for.git
-  revision: a75c779918e6bf18ded2ab9e55bf157db2254465
-  specs:
-    display_for (0.1.2)
-
-GIT
   remote: git://github.com/ryanb/nested_form.git
   revision: 25901026dc470a9d270326e8d507144e4d7be220
   specs:
@@ -50,6 +44,7 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     diff-lcs (1.1.3)
+    display_for (0.1.3)
     erubis (2.7.0)
     git (1.2.5)
     haml (3.1.6)
@@ -161,7 +156,7 @@ DEPENDENCIES
   bootstrap-sass (~> 2.0.1)
   bundler
   devise
-  display_for!
+  display_for (~> 0.1.3)
   haml-rails
   inherited_resources
   jeweler (~> 1.8.4)
