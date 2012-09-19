@@ -2,6 +2,7 @@ source "http://rubygems.org"
 
 gem 'bootstrap-sass', '~> 2.0.1'
 gem 'devise'
+gem 'display_for', '~> 0.1.3'
 gem 'haml-rails'
 gem 'inherited_resources'
 gem 'kaminari'
