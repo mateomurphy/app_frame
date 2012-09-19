@@ -1,9 +1,7 @@
 module AppFrame
   
   module ControllerMethods
-    def self.included(base)
-      base.extend(ClassMethods)
-    end
+    extend ActiveSupport::Concern
   
     module ClassMethods
       def app_frame(options = {})
@@ -11,14 +9,45 @@ module AppFrame
         unless options[:resource] == false
           inherit_resources
           include PaginationSupport
+          include HasManySupport
         end
       end
     end
     
+    module HasManySupport
+      extend ActiveSupport::Concern
+
+      included do
+        helper_method :child_resources
+      end
+
+      module ClassMethods
+        def child_resources
+          @child_resources ||= []
+        end
+
+        def has_many(symbol)
+          config = {
+            :symbol => symbol, 
+            :name => symbol.to_s.humanize, 
+            :resource_class => symbol.to_s.classify.constantize,
+            :resource_name => symbol.to_s.classify
+          }
+
+          self.child_resources << config
+        end      
+      end
+
+      def child_resources
+        self.class.child_resources
+      end
+    end
+
     module PaginationSupport
-      
-      def self.included(base)
-        base.helper_method :count, :page, :per_page
+      extend ActiveSupport::Concern
+
+      included do
+        helper_method :count, :page, :per_page
       end
       
       # paginate collection
