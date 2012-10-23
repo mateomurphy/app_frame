@@ -1,10 +1,11 @@
 = app_frame
 
+{<img src="https://gemnasium.com/mateomurphy/app_frame.png" alt="Dependency Status" />}[https://gemnasium.com/mateomurphy/app_frame]
+
 A skeleton for rails apps
 
 == To do
 
-* Improve web_app_theme support
 * Reduce configuration required by menu system
 
 == Contributing to app_frame
