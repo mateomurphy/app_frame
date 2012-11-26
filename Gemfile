@@ -1,8 +1,8 @@
 source "http://rubygems.org"
 
-gem 'bootstrap-sass', '~> 2.1.0'
+gem 'bootstrap-sass', '~> 2.2.1.1'
 gem 'devise'
-gem 'display_for', '0.1.8'
+gem 'display_for', '0.1.9'
 gem 'haml-rails'
 gem 'inherited_resources'
 gem 'kaminari'
