@@ -1,14 +1,14 @@
-= app_frame
+# app_frame
 
-{<img src="https://gemnasium.com/mateomurphy/app_frame.png" alt="Dependency Status" />}[https://gemnasium.com/mateomurphy/app_frame]
+[![Dependency Status](https://gemnasium.com/mateomurphy/app_frame.png)](https://gemnasium.com/mateomurphy/app_frame)
 
 A skeleton for rails apps
 
-== To do
+## To do
 
 * Reduce configuration required by menu system
 
-== Contributing to app_frame
+## Contributing to app_frame
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
@@ -18,8 +18,8 @@ A skeleton for rails apps
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-== Copyright
+## Copyright
 
-Copyright (c) 2011 Mateo Murphy. See LICENSE.txt for
+Copyright (c) 2011-2012 Mateo Murphy. See LICENSE.txt for
 further details.
 
