@@ -13,6 +13,6 @@
         .container-fluid
           = link_to(Settings.app_name, root_path, :class => 'brand')
     #main.container-fluid
-      = render '/app_frame/layout/flashes'
+      = render 'flashes'
       = yield
       = render :partial => "app_frame/devise/shared/links"        
