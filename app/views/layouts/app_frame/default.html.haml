@@ -16,14 +16,12 @@
     #main.container-fluid
       -if sidebar.present?
         .content
-          =render 'breadcrumb'
           =render 'sub_menu'
           =render 'flashes'
           =yield
         .sidebar
           = sidebar
       -else
-        =render 'breadcrumb'
         =render 'sub_menu'      
         =render 'flashes'
         =yield
