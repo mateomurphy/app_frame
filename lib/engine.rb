@@ -10,10 +10,6 @@ module AppFrame
       ActionView::Base.send       :include, AppFrame::MenuHelper
     end
     
-    initializer "resolver setup" do |app|
-      ActionController::Base.append_view_path ActionView::FileSystemResolver.new("#{config.root}/app/views/#{AppFrame.theme}/actions", ":action{.:formats,}{.:handlers,}")
-    end    
-    
     initializer "gem setup" do |app|
       # '.form-horizontal', '.form-inline', '.form-search' or '.form-vertical'
 
