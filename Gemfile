@@ -11,6 +11,7 @@ gem 'nested_set'
 gem 'sass-rails'
 gem 'settingslogic'
 gem 'simple_form'
+gem 'select2-rails'
 gem 'squeel'
 
 # Add dependencies to develop your gem here.

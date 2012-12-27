@@ -1,5 +1,6 @@
 /*
  *= require anytime
+ *= require select2
  */
 
 @import 'bootstrap';
@@ -19,19 +20,19 @@
 }
 
 #main, .sidebar {
-    margin-top:50px;
+  margin-top:50px;
 }
 
 table .last {
-    width: 100px;
+  width: 100px;
 }
 
 td.last {
-    text-align:center;
+  text-align:center;
 }
 
 select {
-    width: auto;
+  width: auto;
 }
 
 .page-actions {
@@ -45,9 +46,15 @@ select {
 }
 
 .content {
-    input[type=text], textarea, select, .cke_skin_kama {
-        width: 700px;
-    }
+  input[type=text], textarea, select, .cke_skin_kama {
+    width: 700px;
+  }
+  
+  select.date {
+    width: auto;
+  }
+
+  
 }
 
 .debug_dump {

@@ -12,6 +12,7 @@ require 'display_for'
 require 'settingslogic'
 require 'sass'
 require 'bootstrap-sass'
+require 'select2-rails'
 
 module AppFrame
   autoload :ControllerMethods,  'app_frame/controller_methods'

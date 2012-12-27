@@ -6,3 +6,4 @@
 //= require anytime
 //= require bootstrap
 //= require jquery_nested_form
+//= require select2
