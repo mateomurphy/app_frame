@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "app_frame"
-  s.version = "0.4.12"
+  s.version = "0.5.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2012-12-22"
+  s.date = "2012-12-27"
   s.description = "An app framework"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
@@ -40,17 +40,6 @@ Gem::Specification.new do |s|
     "app/helpers/app_frame/scopes_helper.rb",
     "app/helpers/app_frame/tree_nav_helper.rb",
     "app/models/settings.rb",
-    "app/views/app_frame/actions/_breadcrumb.html.haml",
-    "app/views/app_frame/actions/_form.html.haml",
-    "app/views/app_frame/actions/_secondary_menu.html.haml",
-    "app/views/app_frame/actions/_show.html.haml",
-    "app/views/app_frame/actions/_sidebar.html.haml",
-    "app/views/app_frame/actions/_sub_menu.html.haml",
-    "app/views/app_frame/actions/_table.html.haml",
-    "app/views/app_frame/actions/edit.html.haml",
-    "app/views/app_frame/actions/index.html.haml",
-    "app/views/app_frame/actions/new.html.haml",
-    "app/views/app_frame/actions/show.html.haml",
     "app/views/app_frame/devise/confirmations/new.html.haml",
     "app/views/app_frame/devise/passwords/edit.html.haml",
     "app/views/app_frame/devise/passwords/new.html.haml",
@@ -59,9 +48,20 @@ Gem::Specification.new do |s|
     "app/views/app_frame/devise/sessions/new.html.haml",
     "app/views/app_frame/devise/shared/_links.html.haml",
     "app/views/app_frame/devise/unlocks/new.html.haml",
-    "app/views/app_frame/layout/_flashes.html.haml",
-    "app/views/app_frame/layout/_head.html.haml",
-    "app/views/app_frame/layout/_top_menu.html.haml",
+    "app/views/application/_breadcrumb.html.haml",
+    "app/views/application/_flashes.html.haml",
+    "app/views/application/_form.html.haml",
+    "app/views/application/_head.html.haml",
+    "app/views/application/_secondary_menu.html.haml",
+    "app/views/application/_show.html.haml",
+    "app/views/application/_sidebar.html.haml",
+    "app/views/application/_sub_menu.html.haml",
+    "app/views/application/_table.html.haml",
+    "app/views/application/_top_menu.html.haml",
+    "app/views/application/edit.html.haml",
+    "app/views/application/index.html.haml",
+    "app/views/application/new.html.haml",
+    "app/views/application/show.html.haml",
     "app/views/kaminari/app_frame/_first_page.html.haml",
     "app/views/kaminari/app_frame/_gap.html.haml",
     "app/views/kaminari/app_frame/_last_page.html.haml",
@@ -103,6 +103,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<sass-rails>, [">= 0"])
       s.add_runtime_dependency(%q<settingslogic>, [">= 0"])
       s.add_runtime_dependency(%q<simple_form>, [">= 0"])
+      s.add_runtime_dependency(%q<select2-rails>, [">= 0"])
       s.add_runtime_dependency(%q<squeel>, [">= 0"])
       s.add_development_dependency(%q<rails>, ["~> 3.2.8"])
       s.add_development_dependency(%q<rspec-rails>, [">= 0"])
@@ -122,6 +123,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<sass-rails>, [">= 0"])
       s.add_dependency(%q<settingslogic>, [">= 0"])
       s.add_dependency(%q<simple_form>, [">= 0"])
+      s.add_dependency(%q<select2-rails>, [">= 0"])
       s.add_dependency(%q<squeel>, [">= 0"])
       s.add_dependency(%q<rails>, ["~> 3.2.8"])
       s.add_dependency(%q<rspec-rails>, [">= 0"])
@@ -142,6 +144,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<sass-rails>, [">= 0"])
     s.add_dependency(%q<settingslogic>, [">= 0"])
     s.add_dependency(%q<simple_form>, [">= 0"])
+    s.add_dependency(%q<select2-rails>, [">= 0"])
     s.add_dependency(%q<squeel>, [">= 0"])
     s.add_dependency(%q<rails>, ["~> 3.2.8"])
     s.add_dependency(%q<rspec-rails>, [">= 0"])
