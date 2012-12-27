@@ -18,6 +18,12 @@ module AppFrame
       map[type.to_sym] || type
     end
     
+    def icon(key, options = {})
+      css_class = "icon-#{key}"
+      css_class += " icon-white" if options[:invert]
+      content_tag(:i, '', :class => css_class).html_safe
+    end
+    
     def page_header(title, &block)
       content = "".html_safe
       content += content_tag(:div, capture(&block), :class => 'page-actions') if block_given?
