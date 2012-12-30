@@ -2,27 +2,27 @@
 !!! 5
 %html
   %head
-    =render 'head'
+    = render 'head'
   %body
     .navbar.navbar-inverse.navbar-fixed-top{:'data-dropdown'=>"dropdown"}
       .navbar-inner
         .container-fluid
-          =link_to(Settings.app_name, controller_namespaces + [:root], :class => 'brand')
+          = link_to(Settings.app_name, controller_namespaces + [:root], :class => 'brand')
           %ul.nav
-            =render 'top_menu'
+            = render 'top_menu'
           %ul.nav.pull-right
-            =render 'secondary_menu'
+            = render 'secondary_menu'
     
     #main.container-fluid
-      -if sidebar.present?
+      - if sidebar.present?
         .content
-          =render 'sub_menu'
-          =render 'flashes'
-          =yield
+          = render 'sub_menu'
+          = render 'flashes'
+          = yield
         .sidebar
           = sidebar
-      -else
-        =render 'sub_menu'      
-        =render 'flashes'
-        =yield
+      - else
+        = render 'sub_menu'      
+        = render 'flashes'
+        = yield
         
