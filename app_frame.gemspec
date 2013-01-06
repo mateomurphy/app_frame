@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "app_frame"
-  s.version = "0.5.1"
+  s.version = "0.5.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2012-12-30"
+  s.date = "2013-01-06"
   s.description = "An app framework"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "app/assets/javascripts/app_frame/application.js",
+    "app/assets/stylesheets/app_frame/_devise.scss",
     "app/assets/stylesheets/app_frame/_tree.scss",
     "app/assets/stylesheets/app_frame/application.scss",
     "app/controllers/app_frame/devise/confirmations_controller.rb",
