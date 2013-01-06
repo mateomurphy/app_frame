@@ -13,7 +13,11 @@ module AppFrame::ResourcesHelper
   end
   
   def resource_name
-    resource_class.model_name.human
+    if resource_class
+      resource_class.model_name.human 
+    else
+      controller_name
+    end
   end
 
   def parent?

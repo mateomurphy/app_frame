@@ -52,7 +52,7 @@ module AppFrame
       
       # paginate collection
       def collection
-        get_collection_ivar || set_collection_ivar(end_of_association_chain.page(page).per(per_page))
+        get_collection_ivar || set_collection_ivar(end_of_association_chain ? end_of_association_chain.page(page).per(per_page) : nil)
       end
 
       def page
@@ -64,7 +64,11 @@ module AppFrame
       end
       
       def count
-        @count ||= end_of_association_chain.count
+        @count ||= if end_of_association_chain
+          end_of_association_chain.count 
+        else
+          0
+        end
       end
       
     end
