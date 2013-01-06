@@ -7,11 +7,16 @@
     .navbar.navbar-inverse.navbar-fixed-top{:'data-dropdown'=>"dropdown"}
       .navbar-inner
         .container-fluid
+          %a{:class=>"btn btn-navbar", :data => { :toggle => "collapse", :target => ".nav-collapse"}}
+            %span.icon-bar
+            %span.icon-bar        
+            %span.icon-bar
           = link_to(Settings.app_name, controller_namespaces + [:root], :class => 'brand')
-          %ul.nav
-            = render 'top_menu'
-          %ul.nav.pull-right
-            = render 'secondary_menu'
+          .nav-collapse.collapse
+            %ul.nav
+              = render 'top_menu'
+            %ul.nav.pull-right
+              = render 'secondary_menu'
     
     #main.container-fluid
       - if sidebar.present?

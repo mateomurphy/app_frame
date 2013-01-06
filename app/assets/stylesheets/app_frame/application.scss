@@ -4,6 +4,8 @@
  */
 
 @import 'bootstrap';
+#main, .sidebar {  margin-top:50px; }
+@import 'bootstrap-responsive';
 @import 'tree';
 
 .container-fluid > .sidebar {
@@ -17,10 +19,6 @@
 .container-fluid > .content {
   margin-left: 0px;
   margin-right: 280px;
-}
-
-#main, .sidebar {
-  margin-top:50px;
 }
 
 table .last {
@@ -41,7 +39,6 @@ select {
 }
 
 .page-range {
-  margin-top: 12px;
   float: right;
 }
 
@@ -53,8 +50,13 @@ select {
   select.date {
     width: auto;
   }
+}
 
-  
+.btn-toolbar {
+  margin-bottom: 20px;
+  form {
+    margin: 0;
+  }
 }
 
 .debug_dump {
