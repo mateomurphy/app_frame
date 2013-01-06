@@ -1,1 +1,3 @@
-= content_for :toolbar do; end
+.btn-toolbar
+  .btn-group.pull-right
+    = link_to("New #{resource_name}", new_resource_url, :class => 'btn')
