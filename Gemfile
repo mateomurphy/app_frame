@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'bootstrap-sass', '~> 2.2.2.0'
+gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'devise'
 gem 'display_for', '0.1.11'
 gem 'haml-rails'
@@ -17,9 +17,9 @@ gem 'squeel'
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :test, :development do
-  gem "rails", "~> 3.2.8"
+  gem "rails", "~> 3.2.13"
   gem "rspec-rails"
-  gem "bundler"
+  gem "bundler", '~> 1.3.4'
   gem "jeweler", "~> 1.8.4"
   gem "simplecov"
   gem 'log_buddy'
