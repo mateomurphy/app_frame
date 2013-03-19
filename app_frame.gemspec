@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "app_frame"
-  s.version = "0.5.3"
+  s.version = "0.5.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2013-01-06"
+  s.date = "2013-03-19"
   s.description = "An app framework"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
@@ -87,16 +87,16 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/mateomurphy/app_frame"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.23"
+  s.rubygems_version = "1.8.25"
   s.summary = "An app framework"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<bootstrap-sass>, ["~> 2.2.2.0"])
+      s.add_runtime_dependency(%q<bootstrap-sass>, ["~> 2.3.1.0"])
       s.add_runtime_dependency(%q<devise>, [">= 0"])
-      s.add_runtime_dependency(%q<display_for>, ["= 0.1.10"])
+      s.add_runtime_dependency(%q<display_for>, ["= 0.1.12"])
       s.add_runtime_dependency(%q<haml-rails>, [">= 0"])
       s.add_runtime_dependency(%q<inherited_resources>, [">= 0"])
       s.add_runtime_dependency(%q<kaminari>, [">= 0"])
@@ -107,16 +107,16 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<simple_form>, [">= 0"])
       s.add_runtime_dependency(%q<select2-rails>, [">= 0"])
       s.add_runtime_dependency(%q<squeel>, [">= 0"])
-      s.add_development_dependency(%q<rails>, ["~> 3.2.8"])
+      s.add_development_dependency(%q<rails>, ["~> 3.2.13"])
       s.add_development_dependency(%q<rspec-rails>, [">= 0"])
-      s.add_development_dependency(%q<bundler>, [">= 0"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.3.4"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
       s.add_development_dependency(%q<log_buddy>, [">= 0"])
     else
-      s.add_dependency(%q<bootstrap-sass>, ["~> 2.2.2.0"])
+      s.add_dependency(%q<bootstrap-sass>, ["~> 2.3.1.0"])
       s.add_dependency(%q<devise>, [">= 0"])
-      s.add_dependency(%q<display_for>, ["= 0.1.10"])
+      s.add_dependency(%q<display_for>, ["= 0.1.12"])
       s.add_dependency(%q<haml-rails>, [">= 0"])
       s.add_dependency(%q<inherited_resources>, [">= 0"])
       s.add_dependency(%q<kaminari>, [">= 0"])
@@ -127,17 +127,17 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<simple_form>, [">= 0"])
       s.add_dependency(%q<select2-rails>, [">= 0"])
       s.add_dependency(%q<squeel>, [">= 0"])
-      s.add_dependency(%q<rails>, ["~> 3.2.8"])
+      s.add_dependency(%q<rails>, ["~> 3.2.13"])
       s.add_dependency(%q<rspec-rails>, [">= 0"])
-      s.add_dependency(%q<bundler>, [">= 0"])
+      s.add_dependency(%q<bundler>, ["~> 1.3.4"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
       s.add_dependency(%q<simplecov>, [">= 0"])
       s.add_dependency(%q<log_buddy>, [">= 0"])
     end
   else
-    s.add_dependency(%q<bootstrap-sass>, ["~> 2.2.2.0"])
+    s.add_dependency(%q<bootstrap-sass>, ["~> 2.3.1.0"])
     s.add_dependency(%q<devise>, [">= 0"])
-    s.add_dependency(%q<display_for>, ["= 0.1.10"])
+    s.add_dependency(%q<display_for>, ["= 0.1.12"])
     s.add_dependency(%q<haml-rails>, [">= 0"])
     s.add_dependency(%q<inherited_resources>, [">= 0"])
     s.add_dependency(%q<kaminari>, [">= 0"])
@@ -148,9 +148,9 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<simple_form>, [">= 0"])
     s.add_dependency(%q<select2-rails>, [">= 0"])
     s.add_dependency(%q<squeel>, [">= 0"])
-    s.add_dependency(%q<rails>, ["~> 3.2.8"])
+    s.add_dependency(%q<rails>, ["~> 3.2.13"])
     s.add_dependency(%q<rspec-rails>, [">= 0"])
-    s.add_dependency(%q<bundler>, [">= 0"])
+    s.add_dependency(%q<bundler>, ["~> 1.3.4"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
     s.add_dependency(%q<simplecov>, [">= 0"])
     s.add_dependency(%q<log_buddy>, [">= 0"])
