@@ -26,13 +26,13 @@ module AppFrame
           @child_resources ||= []
         end
 
-        def has_many(symbol)
+        def has_many(symbol, options = {})
           config = {
             :symbol => symbol, 
             :name => symbol.to_s.humanize, 
             :resource_class => symbol.to_s.classify.constantize,
             :resource_name => symbol.to_s.classify
-          }
+          }.merge(options)
 
           self.child_resources << config
         end      
