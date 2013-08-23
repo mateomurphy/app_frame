@@ -3,15 +3,49 @@ module AppFrame
   module ControllerMethods
     extend ActiveSupport::Concern
   
+    def controller
+      self
+    end
+  
     module ClassMethods
       def app_frame(options = {})
         layout "#{AppFrame::theme}/#{options[:layout] || 'default'}"
         unless options[:resource] == false
           inherit_resources
+          include AppFrame::ResourcesHelper
           include PaginationSupport
           include HasManySupport
+          include SearchSupport
         end
       end
+    end
+    
+    module SearchSupport
+      extend ActiveSupport::Concern
+      
+      included do
+        helper_method :searchable?
+      end      
+      
+      def searchable?
+        resource_class.respond_to?(:search)
+      end
+      
+      def list_scope
+        @list_scope ||= (controller_namespaces.map(&:to_s).join("_") + "_list").to_sym
+      end
+      
+      def end_of_association_chain
+        chain = super
+
+        return chain if chain.is_a?(ActiveRecord::Base)
+    
+        chain = chain.search(params[:q]) if params[:q].present? && searchable?
+    
+        chain = chain.admin_list if resource_class.respond_to?(list_scope)
+    
+        chain
+      end      
     end
     
     module HasManySupport
