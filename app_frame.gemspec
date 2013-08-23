@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "app_frame"
-  s.version = "0.5.4"
+  s.version = "0.5.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2013-03-19"
+  s.date = "2013-08-23"
   s.description = "An app framework"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
@@ -39,7 +39,9 @@ Gem::Specification.new do |s|
     "app/helpers/app_frame/pagination_helper.rb",
     "app/helpers/app_frame/resources_helper.rb",
     "app/helpers/app_frame/scopes_helper.rb",
+    "app/helpers/app_frame/select_helper.rb",
     "app/helpers/app_frame/tree_nav_helper.rb",
+    "app/models/menu.rb",
     "app/models/settings.rb",
     "app/views/app_frame/devise/confirmations/new.html.haml",
     "app/views/app_frame/devise/passwords/edit.html.haml",
@@ -49,6 +51,7 @@ Gem::Specification.new do |s|
     "app/views/app_frame/devise/sessions/new.html.haml",
     "app/views/app_frame/devise/shared/_links.html.haml",
     "app/views/app_frame/devise/unlocks/new.html.haml",
+    "app/views/application/_brand.html.haml",
     "app/views/application/_breadcrumb.html.haml",
     "app/views/application/_flashes.html.haml",
     "app/views/application/_form.html.haml",
