@@ -11,7 +11,7 @@
             %span.icon-bar
             %span.icon-bar        
             %span.icon-bar
-          = link_to(Settings.app_name, controller_namespaces + [:root], :class => 'brand')
+          = render 'brand'
           .nav-collapse.collapse
             %ul.nav
               = render 'top_menu'
