@@ -43,14 +43,21 @@ select {
   float: right;
 }
 
-.content {
-  input[type=text], textarea, select, .cke_skin_kama {
-    width: 700px;
-  }
-  
-  select.date {
-    width: auto;
-  }
+
+input[type=text], input[type=url], textarea, select, .cke_skin_kama {
+  width: 700px;
+}
+
+input.search-query {
+  width: 300px;
+}
+
+.select2-container {
+  width: 700px;
+}
+
+select.date {
+  width: auto;
 }
 
 .btn-toolbar {
