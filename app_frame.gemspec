@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "app_frame"
-  s.version = "0.5.5"
+  s.version = "0.5.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2013-08-23"
+  s.date = "2013-08-25"
   s.description = "An app framework"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
@@ -56,6 +56,7 @@ Gem::Specification.new do |s|
     "app/views/application/_flashes.html.haml",
     "app/views/application/_form.html.haml",
     "app/views/application/_head.html.haml",
+    "app/views/application/_page_header.html.haml",
     "app/views/application/_secondary_menu.html.haml",
     "app/views/application/_show.html.haml",
     "app/views/application/_sidebar.html.haml",
@@ -97,7 +98,7 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<bootstrap-sass>, ["~> 2.3.1.0"])
+      s.add_runtime_dependency(%q<bootstrap-sass>, ["~> 2.3.2.1"])
       s.add_runtime_dependency(%q<devise>, [">= 0"])
       s.add_runtime_dependency(%q<display_for>, ["= 0.1.12"])
       s.add_runtime_dependency(%q<haml-rails>, [">= 0"])
@@ -110,14 +111,14 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<simple_form>, [">= 0"])
       s.add_runtime_dependency(%q<select2-rails>, [">= 0"])
       s.add_runtime_dependency(%q<squeel>, [">= 0"])
-      s.add_development_dependency(%q<rails>, ["~> 3.2.13"])
+      s.add_development_dependency(%q<rails>, ["~> 3.2.14"])
       s.add_development_dependency(%q<rspec-rails>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.3.4"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_development_dependency(%q<jeweler>, ["~> 1.8.7"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
       s.add_development_dependency(%q<log_buddy>, [">= 0"])
     else
-      s.add_dependency(%q<bootstrap-sass>, ["~> 2.3.1.0"])
+      s.add_dependency(%q<bootstrap-sass>, ["~> 2.3.2.1"])
       s.add_dependency(%q<devise>, [">= 0"])
       s.add_dependency(%q<display_for>, ["= 0.1.12"])
       s.add_dependency(%q<haml-rails>, [">= 0"])
@@ -130,15 +131,15 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<simple_form>, [">= 0"])
       s.add_dependency(%q<select2-rails>, [">= 0"])
       s.add_dependency(%q<squeel>, [">= 0"])
-      s.add_dependency(%q<rails>, ["~> 3.2.13"])
+      s.add_dependency(%q<rails>, ["~> 3.2.14"])
       s.add_dependency(%q<rspec-rails>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.3.4"])
-      s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_dependency(%q<jeweler>, ["~> 1.8.7"])
       s.add_dependency(%q<simplecov>, [">= 0"])
       s.add_dependency(%q<log_buddy>, [">= 0"])
     end
   else
-    s.add_dependency(%q<bootstrap-sass>, ["~> 2.3.1.0"])
+    s.add_dependency(%q<bootstrap-sass>, ["~> 2.3.2.1"])
     s.add_dependency(%q<devise>, [">= 0"])
     s.add_dependency(%q<display_for>, ["= 0.1.12"])
     s.add_dependency(%q<haml-rails>, [">= 0"])
@@ -151,10 +152,10 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<simple_form>, [">= 0"])
     s.add_dependency(%q<select2-rails>, [">= 0"])
     s.add_dependency(%q<squeel>, [">= 0"])
-    s.add_dependency(%q<rails>, ["~> 3.2.13"])
+    s.add_dependency(%q<rails>, ["~> 3.2.14"])
     s.add_dependency(%q<rspec-rails>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.3.4"])
-    s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
+    s.add_dependency(%q<jeweler>, ["~> 1.8.7"])
     s.add_dependency(%q<simplecov>, [">= 0"])
     s.add_dependency(%q<log_buddy>, [">= 0"])
   end
