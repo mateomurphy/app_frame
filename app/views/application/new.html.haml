@@ -1,4 +1,6 @@
-= page_header "New #{resource_name}"
+- content_for :page_header do
+  = page_header "New #{resource_name}"
+
 = simple_nested_form_for resource_path_array, :html => {:class => 'form-inline' } do |f|
   = hidden_field_tag :content_locale, params[:content_locale] if params[:content_locale] 
   = render 'form', :f => f

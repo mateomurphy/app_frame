@@ -21,12 +21,16 @@
     #main.container-fluid
       - if sidebar.present?
         .content
+          .page-header
+            = render 'page_header'
           = render 'sub_menu'
           = render 'flashes'
           = yield
         .sidebar
           = sidebar
       - else
+        .page-header
+          = render 'page_header'      
         = render 'sub_menu'      
         = render 'flashes'
         = yield

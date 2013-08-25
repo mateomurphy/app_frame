@@ -1,5 +1,8 @@
-= page_header resource_name.pluralize
+- content_for :page_header do
+  = page_header resource_name.pluralize
+
 = render 'toolbar'
+
 - if collection
   = scope_nav
   = table_for(controller_namespaces + [resource_class], collection) do |t|

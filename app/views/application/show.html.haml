@@ -1,4 +1,6 @@
-= page_header resource.to_s
+- content_for :page_header do
+  = page_header resource.to_s
+
 = view_for resource_path_array do |s|
   = render 'show', :s => s
 
