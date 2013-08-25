@@ -3,21 +3,31 @@ module AppFrame
   module ControllerMethods
     extend ActiveSupport::Concern
   
-    def controller
-      self
-    end
-  
     module ClassMethods
       def app_frame(options = {})
         layout "#{AppFrame::theme}/#{options[:layout] || 'default'}"
         unless options[:resource] == false
           inherit_resources
-          include AppFrame::ResourcesHelper
+          include ResourceSupport
           include PaginationSupport
           include HasManySupport
           include SearchSupport
         end
       end
+    end
+    
+    module ResourceSupport
+      extend ActiveSupport::Concern
+      
+      included do
+        helper_method :controller_namespaces
+      end   
+      
+      def controller_namespaces
+        result = self.class.to_s.split('::')
+        result.pop
+        result.map(&:underscore)
+      end           
     end
     
     module SearchSupport

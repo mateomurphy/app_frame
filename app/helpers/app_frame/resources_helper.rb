@@ -31,12 +31,6 @@ module AppFrame::ResourcesHelper
   def parent_resource_name
     parent_resource_class.model_name.human
   end
-
-  def controller_namespaces
-    result = controller.class.to_s.split('::')
-    result.pop
-    result.map(&:underscore)
-  end
   
   def namespaced(string)
     if controller_namespaces.any?
