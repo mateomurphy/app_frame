@@ -1,20 +1,15 @@
-select {
-  width: auto;
-}
-
-input[type=text], input[type=url], textarea, .cke_skin_kama {
-  width: 700px;
-}
-
-input.search-query {
-  width: 300px;
-}
-
+input[type=text], 
+input[type=url], 
+textarea, 
+.cke_skin_kama, 
 .select2-container {
   width: 700px;
 }
 
-select.date {
+select {
   width: auto;
 }
 
+input.search {
+  width: 300px;
+}

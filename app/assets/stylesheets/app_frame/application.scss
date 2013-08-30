@@ -4,25 +4,20 @@
  */
 
 @import 'bootstrap';
-#main, .sidebar {  margin-top:110px; }
-@import 'bootstrap-responsive';
 @import 'tree';
 @import 'devise';
 @import 'forms';
 @import 'sidenav';
 @import 'page_header';
+@import 'navlist';
 
-.container-fluid > .sidebar {
-  position: absolute;
-  top: 0;
-  left: auto;
-  right: 20px;
-  width: 260px;
+#main, .sidebar {
+ margin-top: 110px;
 }
 
-.container-fluid > .content {
-  margin-left: 0px;
-  margin-right: 280px;
+.container {
+  max-width: 100%;
+  padding: 20px;
 }
 
 table .last {
@@ -36,7 +31,6 @@ td.last {
 .page-range {
   float: right;
 }
-
 
 .btn-toolbar {
   margin-bottom: 20px;
