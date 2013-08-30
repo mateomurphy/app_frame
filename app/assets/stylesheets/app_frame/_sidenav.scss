@@ -1,0 +1,25 @@
+$sidenav_size: 180px;
+
+#sidenav {
+  position: fixed;
+  width: $sidenav_size;
+  left: 0;
+  top: 40px;
+  bottom: 0;
+  background-color: #f2f7fa;
+  border-right: 1px solid #eee;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.with-sidenav {
+  #main {
+    padding-left: $sidenav_size + 20px;
+  }
+  
+  .page-header {
+    left: $sidenav_size + 1px;
+  }
+
+}
+

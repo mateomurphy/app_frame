@@ -1,5 +1,6 @@
 - content_for :page_header do
-  = page_header resource_name.pluralize
+  = page_header resource_name.pluralize do
+    = link_to("New #{resource_name}", new_resource_url, :class => 'btn btn-primary')
 
 = render 'toolbar'
 

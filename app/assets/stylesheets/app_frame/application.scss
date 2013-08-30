@@ -4,10 +4,13 @@
  */
 
 @import 'bootstrap';
-#main, .sidebar {  margin-top:50px; }
+#main, .sidebar {  margin-top:110px; }
 @import 'bootstrap-responsive';
 @import 'tree';
 @import 'devise';
+@import 'forms';
+@import 'sidenav';
+@import 'page_header';
 
 .container-fluid > .sidebar {
   position: absolute;
@@ -30,35 +33,10 @@ td.last {
   text-align:center;
 }
 
-select {
-  width: auto;
-}
-
-.page-actions {
-  float: right;
-  padding-top: 4px;
-}
-
 .page-range {
   float: right;
 }
 
-
-input[type=text], input[type=url], textarea, select, .cke_skin_kama {
-  width: 700px;
-}
-
-input.search-query {
-  width: 300px;
-}
-
-.select2-container {
-  width: 700px;
-}
-
-select.date {
-  width: auto;
-}
 
 .btn-toolbar {
   margin-bottom: 20px;

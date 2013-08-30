@@ -1,9 +1,8 @@
-- sidebar = render 'sidebar'
 !!! 5
 %html
   %head
     = render 'head'
-  %body
+  %body{:class => body_class}
     .navbar.navbar-inverse.navbar-fixed-top{:'data-dropdown'=>"dropdown"}
       .navbar-inner
         .container-fluid
@@ -19,19 +18,17 @@
               = render 'secondary_menu'
     
     #main.container-fluid
-      - if sidebar.present?
-        .content
-          .page-header
-            = render 'page_header'
+      - if sidenav?
+        #sidenav
+          = sidenav
+      .page-header
+        = render 'page_header'
+      .row-fluid
+        %span{:class => "span#{content_cols}"}
           = render 'sub_menu'
           = render 'flashes'
           = yield
-        .sidebar
-          = sidebar
-      - else
-        .page-header
-          = render 'page_header'      
-        = render 'sub_menu'      
-        = render 'flashes'
-        = yield
-        
+        - if sidebar?
+          .span2.sidebar
+            = sidebar
+            

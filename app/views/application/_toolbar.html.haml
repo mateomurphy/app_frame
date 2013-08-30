@@ -1,7 +1,5 @@
 .btn-toolbar
-  .btn-group
-    = link_to("New #{resource_name}", new_resource_url, :class => 'btn')
   - if searchable?
-    .btn-group.pull-right
+    .btn-group
       = form_for collection_url, :class => "form-search", :method => :get do 
         = text_field_tag 'q', params[:q], :class => "search-query"
