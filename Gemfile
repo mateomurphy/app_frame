@@ -1,12 +1,13 @@
 source "http://rubygems.org"
 
-gem 'bootstrap-sass', '~> 2.3.2.1'
+gem 'bootstrap-sass', '>= 2.3.2.2'
 gem 'devise'
 gem 'display_for', '0.1.12'
 gem 'haml-rails'
 gem 'inherited_resources'
 gem 'kaminari'
-gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
+gem 'nested_form', 
+  :git => 'git://github.com/ryanb/nested_form.git'
 gem 'nested_set'
 gem 'sass-rails'
 gem 'settingslogic'
