@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "app_frame"
-  s.version = "0.5.6"
+  s.version = "0.5.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2013-08-25"
+  s.date = "2013-09-03"
   s.description = "An app framework"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
@@ -20,13 +20,15 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
-    "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
     "Rakefile",
     "VERSION",
     "app/assets/javascripts/app_frame/application.js",
     "app/assets/stylesheets/app_frame/_devise.scss",
+    "app/assets/stylesheets/app_frame/_forms.scss",
+    "app/assets/stylesheets/app_frame/_page_header.scss",
+    "app/assets/stylesheets/app_frame/_sidenav.scss",
     "app/assets/stylesheets/app_frame/_tree.scss",
     "app/assets/stylesheets/app_frame/application.scss",
     "app/controllers/app_frame/devise/confirmations_controller.rb",
@@ -35,6 +37,7 @@ Gem::Specification.new do |s|
     "app/controllers/app_frame/devise/sessions_controller.rb",
     "app/helpers/app_frame/bootstrap_helper.rb",
     "app/helpers/app_frame/breadcrumb_helper.rb",
+    "app/helpers/app_frame/layout_helper.rb",
     "app/helpers/app_frame/menu_helper.rb",
     "app/helpers/app_frame/pagination_helper.rb",
     "app/helpers/app_frame/resources_helper.rb",
@@ -60,6 +63,7 @@ Gem::Specification.new do |s|
     "app/views/application/_secondary_menu.html.haml",
     "app/views/application/_show.html.haml",
     "app/views/application/_sidebar.html.haml",
+    "app/views/application/_sidenav.html.haml",
     "app/views/application/_sub_menu.html.haml",
     "app/views/application/_table.html.haml",
     "app/views/application/_toolbar.html.haml",
