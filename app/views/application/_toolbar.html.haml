@@ -2,4 +2,4 @@
   - if searchable?
     .btn-group
       = form_for collection_url, :class => "form-search", :method => :get do 
-        = text_field_tag 'q', params[:q], :class => "search-query"
+        = text_field_tag 'q', params[:q], :class => "search-query", :placeholder => 'Search'
