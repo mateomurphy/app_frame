@@ -18,3 +18,8 @@ select.date {
   width: auto;
 }
 
+.form-inline {
+  input[type=text], input[type=url] {
+    width: auto;
+  }
+}
