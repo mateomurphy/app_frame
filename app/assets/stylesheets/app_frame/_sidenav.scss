@@ -7,12 +7,12 @@ $sidenav_size: 180px;
   top: 40px;
   bottom: 0;
   background-color: #f2f7fa;
-  border-right: 1px solid #eee;
+  border-right: 1px solid #ddd;
   padding: 10px 0;
   overflow-y: auto;
 }
 
-.with-sidenav {
+.app-frame.with-sidenav {
   #main {
     padding-left: $sidenav_size + 20px;
   }
