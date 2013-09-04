@@ -2,7 +2,8 @@ module AppFrame
   module MenuHelper
     def menu_link(key, path = '#', options = {}, &block)
       active = false
-      highlight = options.delete(:highlights_on) || /#{path}/
+      highlight = options.delete(:highlights_on)
+      highlight ||= options.delete(:exact) ? /^#{path}$/ : /#{path}/
       dropdown = options.delete(:dropdown)
 
       Array(highlight).each do |regex|
