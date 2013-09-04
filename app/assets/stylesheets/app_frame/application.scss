@@ -12,6 +12,10 @@
 @import 'sidenav';
 @import 'page_header';
 
+section {
+  border-bottom: 1px solid #eee;
+}
+
 .container-fluid > .sidebar {
   position: absolute;
   top: 0;
