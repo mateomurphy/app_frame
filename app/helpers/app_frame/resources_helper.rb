@@ -40,6 +40,12 @@ module AppFrame::ResourcesHelper
     end
   end
   
+  def resource_class_path_array
+    result = controller_namespaces
+    result << parent if parent?
+    result << resource_class
+  end
+  
   def resource_path_array
     result = controller_namespaces
     result << parent if parent?

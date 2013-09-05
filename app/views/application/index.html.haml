@@ -1,12 +1,15 @@
 - content_for :page_header do
   = page_header resource_name.pluralize do
-    = link_to("New #{resource_name}", new_resource_url, :class => 'btn btn-primary')
+    - if parent?
+      = link_to("New #{resource_name}", new_resource_url(parent), :class => 'btn btn-primary')
+    - else
+      = link_to("New #{resource_name}", new_resource_url, :class => 'btn btn-primary')
 
 = render 'toolbar'
 
 - if collection
   = scope_nav
-  = table_for(controller_namespaces + [resource_class], collection) do |t|
+  = table_for(resource_class_path_array, collection) do |t|
     = render 'table', :t => t
   = page_range
   = paginate collection, :theme => 'app_frame'
