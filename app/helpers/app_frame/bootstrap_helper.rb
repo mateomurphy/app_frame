@@ -24,10 +24,11 @@ module AppFrame
       content_tag(:i, '', :class => css_class).html_safe
     end
     
-    def page_header(title, &block)
+    def page_header(title, options = {}, &block)
+      title += "<small> #{options[:small]}</small>" if options[:small]
       content = "".html_safe
       content += content_tag(:div, capture(&block), :class => 'page-actions') if block_given?
-      content += content_tag(:h1, title)
+      content += content_tag(:h1, title.to_s.html_safe)
       content
     end
     
