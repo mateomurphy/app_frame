@@ -52,6 +52,12 @@ module AppFrame
     
         chain = chain.search(params[:q]) if params[:q].present? && searchable?
     
+        if params[:tags].present?
+          tag_options = {}
+          tag_options[:any] = true if params[:match] == 'any'
+          chain = chain.tagged_with(params[:tags], tag_options) 
+        end
+    
         chain = chain.admin_list if resource_class.respond_to?(list_scope)
     
         chain
