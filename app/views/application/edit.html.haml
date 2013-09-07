@@ -4,6 +4,7 @@
   
 = simple_nested_form_for resource_path_array, :html => {:class => 'form-inline' } do |f|
   = hidden_field_tag :content_locale, params[:content_locale] if params[:content_locale]
+  = render 'errors'
   = render 'form', :f => f
   .form-actions
     = f.button :submit, :class => 'btn btn-primary'
