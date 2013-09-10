@@ -6,8 +6,9 @@
 
 - child_resources.each do |data|
   %section
-    %h2= data[:name]
     .btn-toolbar
-      = link_to("New #{data[:resource_name]}", polymorphic_url((controller_namespaces + [resource, data[:resource_class]]), :action => :new), :class => 'btn')
+      .btn-group.pull-right
+        = link_to("New #{data[:resource_name]}", polymorphic_url((controller_namespaces + [resource, data[:resource_class]]), :action => :new), :class => 'btn')
+      %h2= data[:name]
     = table_for(controller_namespaces + [resource, data[:resource_class]], resource.send(data[:symbol])) do |t|
       = render (controller_namespaces + [data[:symbol].to_s, 'table']).join('/'), :t => t, :resource_class => data[:resource_class]
