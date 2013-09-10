@@ -38,7 +38,7 @@ module AppFrame
       end      
       
       def searchable?
-        resource_class.respond_to?(:search)
+        resource_class.respond_to?(:with_query)
       end
       
       def list_scope
@@ -48,9 +48,9 @@ module AppFrame
       def end_of_association_chain
         chain = super
 
-        return chain if chain.is_a?(ActiveRecord::Base)
+        return chain if chain.is_a?(ActiveRecord::Base) #|| chain.is_a?(Array)
     
-        chain = chain.search(params[:q]) if params[:q].present? && searchable?
+        chain = chain.with_query(params[:q]) if params[:q].present? && searchable?
     
         if params[:tags].present?
           tag_options = {}
@@ -58,7 +58,7 @@ module AppFrame
           chain = chain.tagged_with(params[:tags], tag_options) 
         end
     
-        chain = chain.admin_list if resource_class.respond_to?(list_scope)
+        chain = chain.send(list_scope) if resource_class.respond_to?(list_scope)
     
         chain
       end      
