@@ -7,6 +7,7 @@ module AppFrame
       dropdown = options.delete(:dropdown)
 
       Array(highlight).each do |regex|
+        regex = Regexp.new(regex) unless regex.is_a?(Regexp)
         active = true if request.path =~ regex
       end
     
